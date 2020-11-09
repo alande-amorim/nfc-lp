@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,700;1,700&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+$font-family-base: "Mali", sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.5;
+$font-weight-base: 700;
+
+$font-family-secondary: "Rubik", sans-serif;
+$font-size-secondary: 16px;
+$line-height-secondary: 1.5;
+$font-weight-secondary: 700;
+
+$font-size-h2: 3rem;
+$font-size-h3: 2.5rem;
+$font-size-h4: 2.12rem;
+$font-size-h5: 1.75rem;
+$font-size-h6: 1.5rem;
+$font-size-h7: 1.25rem;
+$font-size-copy: 1rem;
+$font-size-body2: 0.87rem;
+
+@mixin font-base {
+  font: normal $font-weight-base $font-size-base $font-family-base;
+  color: $gray3;
+  line-height: $line-height-base;
+  letter-spacing: 0.0075rem;
+}
+
+@mixin font-secondary {
+  font: normal $font-weight-secondary $font-size-secondary
+    $font-family-secondary;
+  line-height: $line-height-secondary;
+  letter-spacing: 0.0075rem;
+}
+
+@mixin font-button {
+  font-size: rem(16px);
+  line-height: rem(27px);
+  font-weight: $font-weight-bold;
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "image": {
+      "src": "icon-book.svg"
+    },
+    "title": "Bedtime Stories",
+    "text": "Each different bear comes filled with tons of amazing stories perfect for your child!"
+  },
+  {
+    "image": {
+      "src": "icon-music.svg"
+    },
+    "title": "Nursery Rhymes",
+    "text": "When your little one gets tired they can listen to calming classical tunes which send you happily to sleep."
+  },
+  {
+    "image": {
+      "src": "icon-heart.svg"
+    },
+    "title": "Send Messages",
+    "text": "Through our application you can send video and voice messages to your child via the Smart Bear! is always engaged and learning!"
+  },
+  {
+    "image": {
+      "src": "icon-brain.svg"
+    },
+    "title": "Educational Content",
+    "text": "Now your child can start learning to count, how to add and so much more through educational stories!"
+  },
+  {
+    "image": {
+      "src": "icon-nfc.svg"
+    },
+    "title": "NFC Integrated",
+    "text": "Simply tap any compatible phone to the bear and see a world of fun open up!"
+  },
+  {
+    "image": {
+      "src": "icon-smile.svg"
+    },
+    "title": "Unlimited Fun",
+    "text": "The Smart Bear will change stories every night to ensure that your child is always engaged and learning!"
+  }
+]

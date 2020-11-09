@@ -1,0 +1,31 @@
+@function rem($size) {
+  @return #{$size / $font-size-base}rem;
+}
+
+@function vwCalc($num) {
+  @return ($num / ($num * 0 + 1)) / 1920 * 100vw;
+}
+
+@function vwXlCalc($num) {
+  @return ($num / ($num * 0 + 1)) / 1440 * 100vw;
+}
+
+@function vwLgCalc($num) {
+  @return ($num / ($num * 0 + 1)) / 1280 * 100vw;
+}
+
+@function vwMdCalc($num) {
+  @return ($num / ($num * 0 + 1)) / 1024 * 100vw;
+}
+
+@function vwSmCalc($num) {
+  @return ($num / ($num * 0 + 1)) / 768 * 100vw;
+}
+
+@function vwXsCalc($num) {
+  @return ($num / ($num * 0 + 1)) / 375 * 100vw;
+}
+
+@function vhCalc($num) {
+  @return ($num / ($num * 0 + 1)) / 980 * 100vh;
+}

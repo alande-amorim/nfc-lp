@@ -1,0 +1,10 @@
+body {
+  @include font-base;
+  background: $white;
+}
+
+.content-wrap {
+  padding: 0 calc((100vw - 2560px) / 2);
+  width: 1280px;
+  margin: 0 auto;
+}
