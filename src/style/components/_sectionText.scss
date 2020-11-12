@@ -1,0 +1,80 @@
+.red {
+  --color: #{$pink2};
+}
+.blue {
+  --color: #{$blue1};
+}
+.green {
+  --color: #{$green};
+}
+
+.section__text {
+  display: flex;
+  flex-direction: row;
+  width: 1280px;
+  margin: 0 auto;
+  align-items: baseline;
+  justify-content: space-evenly;
+  position: relative;
+  height: 207px;
+  z-index: 1;
+  align-items: center;
+
+  &.right {
+    flex-direction: row-reverse;
+    h2 {
+      text-align: left;
+    }
+
+    p {
+      &::before {
+        border: 20px solid $white;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        left: initial;
+        right: 0;
+      }
+    }
+  }
+
+  h2 {
+    width: 29%;
+    // height: 100%;
+    font-size: 3rem;
+    text-align: right;
+    line-height: 3rem;
+    margin: 0;
+    color: var(--color);
+  }
+
+  p {
+    position: relative;
+    background: var(--color);
+    color: $white;
+    width: 35%;
+    padding: 90px 120px;
+    text-align: justify;
+    margin: 0;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      border-top-color: transparent;
+      border-top-style: solid;
+      border-top-width: 15px;
+      border-right-color: transparent;
+      border-right-style: solid;
+      border-right-width: 15px;
+      border-bottom-color: transparent;
+      border-bottom-style: solid;
+      border-bottom-width: 15px;
+      border-left-color: $white;
+      border-left-style: solid;
+      border-left-width: 15px;
+    }
+  }
+}
