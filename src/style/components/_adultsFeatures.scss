@@ -1,0 +1,22 @@
+.grownups-features {
+  &__text {
+  }
+  &__slider {
+    &__item {
+      position: relative;
+      h1,
+      p {
+        position: absolute;
+        width: 300px;
+        color: $white;
+        z-index: 10;
+      }
+
+      &__bg-mask {
+        height: 200px;
+        background-size: contain;
+        position: relative;
+      }
+    }
+  }
+}
