@@ -5,7 +5,9 @@ const SectionText = ({ title, text, color, direction }) => {
   return (
     <div className={`section__text ${color} ${direction}`}>
       <h2>{title}</h2>
-      <p>{text}</p>
+      <p>
+        <span>{text}</span>
+      </p>
     </div>
   )
 }
