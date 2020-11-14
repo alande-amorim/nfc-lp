@@ -1,20 +1,43 @@
 .specifications {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   column-gap: 2rem;
   row-gap: 1rem;
   padding-bottom: 60px;
   border-bottom: 1px solid $gray1;
+  width: 95vw;
 
-  .specifications__item {
+  &__item {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
+    img {
+      transform: scale(0.7);
+    }
+
     &__description {
       width: 75%;
+      h1 {
+        @include font-secondary;
+        font-size: 1.4rem;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $max-width-lg) {
+  .specifications {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100vw;
+    &__item {
+      img {
+        transform: scale(1);
+      }
     }
   }
 }

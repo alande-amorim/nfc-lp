@@ -18,7 +18,12 @@ body {
 }
 
 .content-wrap {
-  padding: 0 calc((100vw - 2560px) / 2);
-  width: 1280px;
+  padding: 0 1rem;
   margin: 0 auto;
+}
+
+@media screen and (min-width: $max-width-lg) {
+  .content-wrap {
+    width: 1280px;
+  }
 }

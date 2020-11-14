@@ -4,7 +4,6 @@
   h2 {
     text-transform: uppercase;
     color: $gray2;
-    font-size: 3rem;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
@@ -40,6 +39,14 @@
     &:nth-child(1),
     &:nth-child(3) {
       transform: scale(0.7);
+    }
+  }
+}
+
+@media screen and (min-width: $max-width-lg) {
+  .products {
+    h2 {
+      font-size: 3rem;
     }
   }
 }

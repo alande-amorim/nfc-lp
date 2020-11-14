@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import SectionText from "../SectionText"
+import SectionContent from "../SectionContent"
 
 const AdultsFeatures = () => {
   const data = useStaticQuery(graphql`
@@ -35,7 +36,7 @@ const AdultsFeatures = () => {
         direction="left"
       />
 
-      <div className="features__slider">
+      <SectionContent className="features__slider" direction="left">
         <article className="features__slider__item">
           <div className="slider__info">
             <h2>Share videos</h2>
@@ -52,7 +53,7 @@ const AdultsFeatures = () => {
             fluid={data.cloudBg.childImageSharp.fluid}
           ></BackgroundImage>
         </article>
-      </div>
+      </SectionContent>
     </section>
   )
 }

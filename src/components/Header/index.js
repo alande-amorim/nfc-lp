@@ -31,15 +31,15 @@ const Header = ({ siteTitle }) => {
       <ColorfulBar />
 
       <div className="header__logo-wrapper">
-        <BackgroundImage fixed={logobg.childImageSharp.fixed}>
-          <a href="https://nfcbear.com">
-            <Image
-              className="logo"
-              fixed={logo.childImageSharp.fixed}
-              alt="Momento Toys"
-            />
-          </a>
-        </BackgroundImage>
+        {/* <BackgroundImage fixed={logobg.childImageSharp.fixed}> */}
+        <a href="https://nfcbear.com">
+          <Image
+            className="logo"
+            fixed={logo.childImageSharp.fixed}
+            alt="Momento Toys"
+          />
+        </a>
+        {/* </BackgroundImage> */}
       </div>
     </header>
   )

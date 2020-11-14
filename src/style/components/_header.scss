@@ -2,8 +2,35 @@ header {
   .header__logo-wrapper {
     position: absolute;
     z-index: 100;
-    top: 0;
-    text-align: center;
-    margin-left: 100px;
+    top: -36%;
+    background: #fff;
+    width: rem(334px);
+    height: rem(334px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    transform: rotate(45deg);
+    left: rem(-44px);
+
+    a {
+      transform: rotate(-45deg) translate(0px, 165px) scale(0.6);
+    }
+  }
+}
+
+@media screen and (min-width: $max-width-lg) {
+  header {
+    .header__logo-wrapper {
+      width: rem(374px);
+      height: rem(374px);
+      top: rem(-(374px * 0.7));
+      left: rem(100px);
+      transform: rotate(45deg);
+
+      a {
+        transform: rotate(-45deg) translate(0px, rem(140px)) scale(1);
+      }
+    }
   }
 }

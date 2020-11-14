@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import SectionText from "../SectionText"
+import SectionContent from "../SectionContent"
 
 const Animation = () => {
   const data = useStaticQuery(graphql`
@@ -25,7 +26,7 @@ const Animation = () => {
         direction="left"
       />
 
-      <div className="features__slider">
+      <SectionContent className="features__slider" direction="left">
         <article className="features__slider__item">
           <div className="slider__info">
             <h2>Nursery Rhymes</h2>
@@ -39,7 +40,7 @@ const Animation = () => {
           </div>
           <Image fluid={data.file.childImageSharp.fluid} />
         </article>
-      </div>
+      </SectionContent>
     </section>
   )
 }

@@ -8,22 +8,42 @@
 
     &:nth-child(1) {
       background: $green;
+      width: 30%;
     }
 
     &:nth-child(2) {
       background: $pink1;
+      width: 30%;
     }
 
     &:nth-child(3) {
       background: $blue1;
+      width: 20%;
     }
 
     &:nth-child(4) {
       background: $yellow;
+      width: 20%;
     }
   }
 
   &.inverted {
     transform: rotate(180deg);
+  }
+}
+
+header {
+  .colorful_bar {
+    div {
+      flex: initial;
+    }
+  }
+}
+
+@media screen and (min-width: $max-width-lg) {
+  .colorful_bar {
+    div {
+      flex: 1;
+    }
   }
 }
