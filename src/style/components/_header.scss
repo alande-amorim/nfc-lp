@@ -2,7 +2,7 @@ header {
   .header__logo-wrapper {
     position: absolute;
     z-index: 100;
-    top: -36%;
+    top: rem(-300px);
     background: #fff;
     width: rem(334px);
     height: rem(334px);

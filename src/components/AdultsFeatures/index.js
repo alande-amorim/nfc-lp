@@ -8,24 +8,58 @@ import SectionContent from "../SectionContent"
 const AdultsFeatures = () => {
   const data = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "banners/grown-ups1.png" }) {
+      desktop: file(relativePath: { eq: "banners/grown-ups1.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      cloudBg: file(relativePath: { eq: "banners/banner-bg.png" }) {
+      mobile: file(relativePath: { eq: "banners/mobile/grown-ups1.png" }) {
         childImageSharp {
-          fluid(maxWidth: 2000) {
+          fluid(maxWidth: 800, quality: 100) {
             ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cloudBgDesktop: file(relativePath: { eq: "banners/banner-bg.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cloudBgMobile: file(
+        relativePath: { eq: "banners/mobile/banner-bg.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 800, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
     }
   `)
 
-  console.log(data.cloudBg.childImageSharp.fluid)
+  const sources = [
+    data.mobile.childImageSharp.fluid,
+    {
+      ...data.desktop.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ]
+
+  const bgSources = [
+    data.cloudBgMobile.childImageSharp.fluid,
+    {
+      ...data.cloudBgDesktop.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ]
 
   return (
     <section className="grown-ups features">
@@ -46,11 +80,11 @@ const AdultsFeatures = () => {
               obcaecati ad commodi.
             </p>
           </div>
-          <Image fluid={data.file.childImageSharp.fluid} />
+          <Image fluid={sources} />
           <BackgroundImage
             tag="article"
             className="features__slider__item__bg-mask"
-            fluid={data.cloudBg.childImageSharp.fluid}
+            fluid={bgSources}
           ></BackgroundImage>
         </article>
       </SectionContent>

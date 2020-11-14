@@ -16,11 +16,12 @@ const Hero = () => {
       senior: file(relativePath: { eq: "hero/senior.png" }) {
         childImageSharp {
           fluid(
-            quality: 85
-            maxWidth: 2560
-            srcSetBreakpoints: [200, 340, 520, 890, 1440, 1920, 2560]
+            quality: 100
+            maxWidth: 890
+            srcSetBreakpoints: [200, 340, 520, 890]
           ) {
             ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -33,6 +34,7 @@ const Hero = () => {
           childImageSharp {
             fluid(quality: 100, maxWidth: 456) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

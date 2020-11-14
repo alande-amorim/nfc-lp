@@ -7,15 +7,32 @@ import SectionContent from "../SectionContent"
 const KidsFeatures = () => {
   const data = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "banners/kids1.png" }) {
+      desktop: file(relativePath: { eq: "banners/kids1.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      mobile: file(relativePath: { eq: "banners/mobile/kids1.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 800, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
     }
   `)
+
+  const sources = [
+    data.mobile.childImageSharp.fluid,
+    {
+      ...data.desktop.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ]
 
   return (
     <section className="features kids">
@@ -38,7 +55,7 @@ const KidsFeatures = () => {
               numquam recusandae obcaecati ad commodi.
             </p>
           </div>
-          <Image fluid={data.file.childImageSharp.fluid} />
+          <Image fluid={sources} />
         </article>
       </SectionContent>
     </section>

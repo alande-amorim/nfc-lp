@@ -6,14 +6,13 @@
     color: $gray2;
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 80px;
     text-align: center;
   }
 
   &__container {
     display: flex;
     flex-direction: row;
-    padding: 80px;
   }
   &__item {
     position: relative;

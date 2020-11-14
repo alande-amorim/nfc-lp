@@ -51,7 +51,7 @@
     span {
       font-size: 1rem;
       line-height: 1.2rem;
-      text-align: justify;
+      text-align: center;
     }
 
     &::before {
@@ -139,6 +139,7 @@
       span {
         font-size: 1.2rem;
         line-height: 1.8rem;
+        text-align: justify;
       }
     }
   }
