@@ -7,9 +7,9 @@ import SectionContent from "../SectionContent"
 const Animation = () => {
   const data = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "banners/kids1.png" }) {
+      file(relativePath: { eq: "banners/animation.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -18,7 +18,7 @@ const Animation = () => {
   `)
 
   return (
-    <section className="features kids">
+    <section className="features animation">
       <SectionText
         title="... and Momento Bear is the chest."
         text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."

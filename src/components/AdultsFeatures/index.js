@@ -62,7 +62,7 @@ const AdultsFeatures = () => {
   ]
 
   return (
-    <section className="grown-ups features">
+    <section className="features grown-ups">
       <SectionText
         title="For the Grown-ups"
         text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit."
