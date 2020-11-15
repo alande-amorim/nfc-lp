@@ -1,26 +1,4 @@
-.features {
-  &.kids {
-    .features__text h2 {
-      color: $green;
-    }
-  }
-
-  &.kids {
-    .features__slider {
-      &__item {
-        .slider__info {
-          left: initial;
-          right: 10%;
-
-          h2,
-          p {
-            text-align: left;
-          }
-        }
-      }
-    }
-  }
-
+.banners {
   &__slider {
     &__item {
       position: relative;
@@ -64,7 +42,7 @@
 }
 
 @media screen and (min-width: $max-width-lg) {
-  .features {
+  .banners {
     &__slider {
       &__item {
         &__bg-mask {

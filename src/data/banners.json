@@ -1,0 +1,28 @@
+[
+  {
+    "type": "GROWNUP_FEATURES",
+    "title": "Share Videos",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "image": {
+      "desktop": {
+        "src": "../assets/banners/grown-ups1.png"
+      },
+      "mobile": {
+        "src": "../assets/banners/mobile/grown-ups1.png"
+      }
+    }
+  },
+  {
+    "type": "GROWNUP_FEATURES",
+    "title": "Share Pictures",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "image": {
+      "desktop": {
+        "src": "../assets/banners/kids1.png"
+      },
+      "mobile": {
+        "src": "../assets/banners/mobile/kids1.png"
+      }
+    }
+  }
+]

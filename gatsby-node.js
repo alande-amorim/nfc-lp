@@ -18,11 +18,23 @@ exports.onCreateNode = ({ node, actions }) => {
     })
   }
   if (node.internal.type === "ProductsJson") {
-    // extends the existing gatsby node with a new field, later accessible via the fields graphql node.
     createNodeField({
-      node, // the current node
-      name: `product`, // defines a name for the new element being added.
-      value: `../assets/products/${node.image.src}`, //Injects the value, this will be relative to the path of the json, it will look into /src/images
+      node,
+      name: `product`,
+      value: `../assets/products/${node.image.src}`,
+    })
+  }
+
+  if (node.internal.type === "BannersJson") {
+    createNodeField({
+      node,
+      name: `desktopImg`,
+      value: node.image.desktop.src,
+    })
+    createNodeField({
+      node,
+      name: `mobileImg`,
+      value: node.image.mobile.src,
     })
   }
 }

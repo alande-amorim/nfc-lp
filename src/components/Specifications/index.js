@@ -31,10 +31,12 @@ const Specifications = () => {
   `)
 
   return (
-    <section className="specifications content-wrap">
-      {specifications.map((spec, index) => {
-        return <Article spec={spec} key={index} />
-      })}
+    <section className="content-wrap">
+      <div className="specifications">
+        {specifications.map((spec, index) => {
+          return <Article spec={spec} key={index} />
+        })}
+      </div>
     </section>
   )
 }
