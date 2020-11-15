@@ -5,37 +5,6 @@
       .banner__background {
         width: 100%;
         min-height: 100vh;
-        animation: animatedBackground 60s infinite;
-
-        &#{&},
-        &:before,
-        &:after {
-          animation: animatedBackground 60s infinite;
-        }
-        @keyframes animatedBackground {
-          // 0% {
-          //   background-position: 0 0;
-          // }
-          // 100% {
-          //   background-position: 100% 0;
-          // }
-
-          0% {
-            background-position: 0 0;
-          }
-          10% {
-            background-position: 0 0;
-          }
-          50% {
-            background-position: 100% 0;
-          }
-          60% {
-            background-position: 100% 0;
-          }
-          100% {
-            background-position: 0 0;
-          }
-        }
       }
       .slider__info {
         position: absolute;
@@ -76,6 +45,62 @@
   }
 }
 
+@media screen and (max-width: $max-width-lg) {
+  .left .banner__background {
+    animation: animatedBackground 60s infinite;
+
+    &#{&},
+    &:before,
+    &:after {
+      animation: animatedBackground 60s infinite;
+    }
+  }
+  .right .banner__background {
+    animation: animatedBackgroundReverse 60s infinite;
+
+    &#{&},
+    &:before,
+    &:after {
+      animation: animatedBackgroundReverse 60s infinite;
+    }
+  }
+
+  @keyframes animatedBackground {
+    0% {
+      background-position: 0 0;
+    }
+    10% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 100% 0;
+    }
+    60% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+  @keyframes animatedBackgroundReverse {
+    0% {
+      background-position: 100% 0;
+    }
+    10% {
+      background-position: 100% 0;
+    }
+    50% {
+      background-position: 0 0;
+    }
+    60% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+}
 @media screen and (min-width: $max-width-lg) {
   .banners {
     &__slider {

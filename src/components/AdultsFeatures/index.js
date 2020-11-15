@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Carousel, { Dots } from "@brainhubeu/react-carousel"
 import SectionText from "../SectionText"
@@ -40,12 +40,18 @@ const AdultsFeatures = () => {
     }
   `)
 
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(0)
 
-  onchange(newValue) {
-    setValue(newValue);
+  function onchange(value) {
+    setValue({ value })
   }
-  
+
+  function getSliders() {
+    return banners.map(({ id, title, text, fields: images }) => (
+      <Banner background={images} key={id} title={title} text={text} />
+    ))
+  }
+
   return (
     <>
       <section className="banners grown-ups left">
@@ -57,12 +63,12 @@ const AdultsFeatures = () => {
         />
 
         <SectionContent className="banners__slider" direction="left">
-          <Carousel className="banners__slider__item">
+          <Carousel className="banners__slider__item" value={value}>
             {banners.map(({ id, title, text, fields: images }) => (
               <Banner background={images} key={id} title={title} text={text} />
             ))}
           </Carousel>
-          <Dots number={3} value={value} onChange={this.onchange} />
+          <Dots number={banners.length} value={value} onChange={onchange} />
         </SectionContent>
       </section>
     </>
