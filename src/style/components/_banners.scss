@@ -16,13 +16,8 @@
         left: 10%;
 
         h2 {
-          text-align: right;
           font-size: 3rem;
           line-height: 3rem;
-        }
-
-        p {
-          text-align: right;
         }
       }
 
@@ -43,25 +38,48 @@
       }
     }
   }
+
+  &.left {
+    .slider__info {
+      h2,
+      p {
+        // text-align: right;
+        text-align: left;
+      }
+    }
+  }
+  &.right {
+    .slider__info {
+      h2,
+      p {
+        text-align: left;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $max-width-lg) {
-  .left .banner__background {
-    animation: animatedBackground 60s infinite;
-
-    &#{&},
-    &:before,
-    &:after {
+  .left {
+    .banner__background {
       animation: animatedBackground 60s infinite;
+
+      &#{&},
+      &:before,
+      &:after {
+        animation: animatedBackground 60s infinite;
+      }
     }
   }
-  .right .banner__background {
-    animation: animatedBackgroundReverse 60s infinite;
 
-    &#{&},
-    &:before,
-    &:after {
+  .right {
+    .banner__background {
       animation: animatedBackgroundReverse 60s infinite;
+
+      &#{&},
+      &:before,
+      &:after {
+        animation: animatedBackgroundReverse 60s infinite;
+      }
     }
   }
 
