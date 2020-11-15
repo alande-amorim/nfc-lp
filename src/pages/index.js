@@ -3,18 +3,16 @@ import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import Animation from "../components/Animation"
 import KidsFeatures from "../components/KidsFeatures"
-import AdultsFeatures from "../components/AdultsFeatures"
 import ChooseYours from "../components/ChooseYours"
 import Specifications from "../components/Specifications"
-import DemoCarousel from "../components/DemoCarousel"
+import AdultsFeatures from "../components/AdultsFeatures"
 
 const IndexPage = () => (
   <Layout>
     <Hero />
     <Animation />
     <KidsFeatures />
-    {/* <AdultsFeatures /> */}
-    <DemoCarousel />
+    <AdultsFeatures />
     <ChooseYours />
     <Specifications />
   </Layout>

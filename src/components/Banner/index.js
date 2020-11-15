@@ -13,10 +13,7 @@ const Banner = ({ background, title, text }) => {
   return (
     <>
       <BackgroundImage
-        style={{
-          width: "100%",
-          minHeight: "100vh",
-        }}
+        className="banner__background"
         tag="article"
         fluid={imgSources}
       >

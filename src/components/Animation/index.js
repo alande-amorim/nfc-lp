@@ -28,16 +28,6 @@ const Animation = () => {
 
       <SectionContent className="features__slider" direction="left">
         <article className="features__slider__item">
-          <div className="slider__info">
-            <h2>Nursery Rhymes</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-              blanditiis aliquid incidunt culpa nam atque numquam recusandae
-              obcaecati ad commodi. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque
-              numquam recusandae obcaecati ad commodi.
-            </p>
-          </div>
           <Image fluid={data.file.childImageSharp.fluid} />
         </article>
       </SectionContent>

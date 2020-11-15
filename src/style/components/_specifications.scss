@@ -7,6 +7,7 @@
   padding-bottom: 60px;
   border-bottom: 1px solid $gray1;
   width: 95vw;
+  margin: 0 auto;
 
   &__item {
     display: flex;
@@ -33,7 +34,6 @@
   .specifications {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    width: 100vw;
     &__item {
       img {
         transform: scale(1);
