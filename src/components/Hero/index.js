@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import Image from "gatsby-image"
 
 const Hero = () => {
   const { clouds, bg, senior, thumbs } = useStaticQuery(graphql`

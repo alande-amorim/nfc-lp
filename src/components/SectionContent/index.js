@@ -9,4 +9,10 @@ const SectionContent = ({ className, children, direction }) => {
   )
 }
 
+SectionContent.propTypes = {
+  className: PropTypes.string,
+  direction: PropTypes.string,
+  children: PropTypes.node.isRequired,
+}
+
 export default SectionContent
