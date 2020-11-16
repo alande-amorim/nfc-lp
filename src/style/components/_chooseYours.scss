@@ -1,6 +1,10 @@
 .products {
   padding: 60px 0;
 
+  .carousel-item {
+    padding: 0 10%;
+  }
+
   h2 {
     text-transform: uppercase;
     color: $gray2;
@@ -8,15 +12,14 @@
     max-width: 800px;
     margin: 0 auto 80px;
     text-align: center;
-  }
-
-  &__container {
+    padding: 0 2rem;
   }
 
   &__item {
-    position: relative;
-    max-width: 80%;
-    width: 580px;
+    // position: relative;
+    // max-width: 80%;
+    // margin: 0 10%;
+    // width: 580px;
     // height: 610px;
 
     a {
@@ -27,7 +30,7 @@
       text-decoration: none;
       padding: 1rem 1rem;
       border-radius: 3rem;
-      bottom: 2rem;
+      bottom: 1rem;
       left: 50%;
       transform: translate(-50%, 0);
       width: 60%;
