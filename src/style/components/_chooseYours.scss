@@ -1,9 +1,6 @@
 .products {
+  display: block;
   padding: 120px 0;
-
-  .carousel-item {
-    padding: 0 10%;
-  }
 
   h2 {
     text-transform: uppercase;
@@ -15,23 +12,27 @@
     padding: 0 2rem;
   }
 
-  &__item {
-    // position: relative;
-    // max-width: 80%;
-    // margin: 0 10%;
-    // width: 580px;
-    // height: 610px;
+  &__list {
+    width: 93vw;
+    margin: 0 auto;
+  }
 
+  &__item {
+    max-width: 600px;
+    max-height: 629px;
+
+    height: 100vw * 1.0483333333333333;
+    position: relative;
+    outline: none;
     .btn {
       position: absolute;
       left: 50%;
       transform: translate(-50%, 0);
-      width: 60%;
+      bottom: 3rem;
     }
 
-    &:nth-child(1),
-    &:nth-child(3) {
-      // transform: scale(0.7);
+    &:hover {
+      animation: hoverSwing 10s infinite;
     }
   }
 }
@@ -43,9 +44,32 @@
     }
 
     &__item {
-      a {
+      .btn {
         font-size: 2rem;
       }
     }
+
+    .slick-slide {
+      transform: scale(0.8);
+
+      &.slick-current + .slick-slide {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@keyframes hoverSwing {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(1deg);
+  }
+  90% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

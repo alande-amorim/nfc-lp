@@ -12,6 +12,7 @@ const Animation = () => {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -19,6 +20,7 @@ const Animation = () => {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -41,11 +43,11 @@ const Animation = () => {
       <BackgroundImage
         fluid={backgroundImageStack}
         className="section__content banners__slider background"
-        style={{
-          backgroundPosition: "-175px 100% , bottom center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "contain, cover",
-        }}
+        // style={{
+        //   backgroundPosition: "-175px 100% , bottom center",
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundSize: "contain, cover",
+        // }}
       />
     </section>
   )

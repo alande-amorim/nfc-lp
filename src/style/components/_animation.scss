@@ -19,5 +19,14 @@
 
 @media screen and (min-width: $max-width-lg) {
   .animation {
+    .background {
+      &#{&},
+      &:before,
+      &:after {
+        background-position: -175px 130%, bottom center !important;
+        background-repeat: no-repeat !important;
+        background-size: contain, cover !important;
+      }
+    }
   }
 }

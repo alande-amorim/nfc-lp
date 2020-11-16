@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
-import Carousel from "react-bootstrap/Carousel"
+import BackgroundImage from "gatsby-background-image"
+import Slider from "react-slick"
 
 const ChooseYours = () => {
   const {
@@ -17,9 +17,8 @@ const ChooseYours = () => {
           fields {
             product {
               childImageSharp {
-                fluid(maxWidth: 800) {
+                fluid(maxWidth: 600) {
                   ...GatsbyImageSharpFluid
-                  ...GatsbyImageSharpFluidLimitPresentationSize
                 }
               }
             }
@@ -29,22 +28,53 @@ const ChooseYours = () => {
     }
   `)
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
+  }
+
   return (
     <section className="products">
       <h2>Lorem ipsum dolor sit amet consectetur</h2>
 
-      <Carousel interval={null} indicators={false}>
+      <Slider {...settings} className="products__list">
         {products.map((product, index) => {
           return (
-            <Carousel.Item key={index} className="products__item">
-              <Image fluid={product.fields.product.childImageSharp.fluid} />
+            <BackgroundImage
+              fluid={product.fields.product.childImageSharp.fluid}
+              key={index}
+              className="products__item"
+            >
               <a className="btn" href={product.url}>
                 Shop Now
               </a>
-            </Carousel.Item>
+            </BackgroundImage>
           )
         })}
-      </Carousel>
+      </Slider>
     </section>
   )
 }
