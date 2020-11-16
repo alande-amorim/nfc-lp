@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Carousel, { Dots } from "@brainhubeu/react-carousel"
+import Carousel from "react-bootstrap/Carousel"
 import SectionText from "../SectionText"
 import SectionContent from "../SectionContent"
 
@@ -49,9 +49,11 @@ const KidsFeatures = () => {
       />
 
       <SectionContent className="banners__slider" direction="right">
-        <Carousel className="banners__slider__item">
+        <Carousel className="banners__slider__item" interval={null}>
           {banners.map(({ id, title, text, fields: images }) => (
-            <Banner background={images} key={id} title={title} text={text} />
+            <Carousel.Item key={id}>
+              <Banner background={images} key={id} title={title} text={text} />
+            </Carousel.Item>
           ))}
         </Carousel>
       </SectionContent>

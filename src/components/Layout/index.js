@@ -6,8 +6,8 @@ import SEO from "../SEO"
 import Header from "../Header"
 import Footer from "../Footer"
 
+import "bootstrap/dist/css/bootstrap.min.css"
 import "../../style/main.scss"
-import "@brainhubeu/react-carousel/lib/style.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

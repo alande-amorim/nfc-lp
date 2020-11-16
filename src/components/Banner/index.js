@@ -11,22 +11,20 @@ const Banner = ({ background, title, text }) => {
   ]
 
   return (
-    <>
-      <BackgroundImage
-        className="banner__background"
-        tag="article"
-        fluid={imgSources}
-      >
-        <div className="slider__info">
-          <h2>Share videos</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-            blanditiis aliquid incidunt culpa nam atque numquam recusandae
-            obcaecati ad commodi.
-          </p>
-        </div>
-      </BackgroundImage>
-    </>
+    <BackgroundImage
+      className="banner__background"
+      tag="article"
+      fluid={imgSources}
+    >
+      <div className="slider__info">
+        <h2>Share videos</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+          blanditiis aliquid incidunt culpa nam atque numquam recusandae
+          obcaecati ad commodi.
+        </p>
+      </div>
+    </BackgroundImage>
   )
 }
 

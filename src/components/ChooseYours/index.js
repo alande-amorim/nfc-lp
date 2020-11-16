@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
-import Carousel, { Dots, slidesToShowPlugin } from "@brainhubeu/react-carousel"
+import Carousel from "react-bootstrap/Carousel"
 
 const ChooseYours = () => {
   const {
@@ -33,45 +33,13 @@ const ChooseYours = () => {
     <section className="products">
       <h2>Lorem ipsum dolor sit amet consectetur</h2>
 
-      <Carousel
-        className="products__container"
-        plugins={[
-          {
-            resolve: slidesToShowPlugin,
-            options: {
-              numberOfSlides: 3,
-            },
-          },
-        ]}
-        breakpoints={{
-          640: {
-            plugins: [
-              {
-                resolve: slidesToShowPlugin,
-                options: {
-                  numberOfSlides: 1,
-                },
-              },
-            ],
-          },
-          900: {
-            plugins: [
-              {
-                resolve: slidesToShowPlugin,
-                options: {
-                  numberOfSlides: 2,
-                },
-              },
-            ],
-          },
-        }}
-      >
+      <Carousel interval={null} indicators={false}>
         {products.map((product, index) => {
           return (
-            <article key={index} className="products__item">
+            <Carousel.Item key={index} className="products__item">
               <Image fluid={product.fields.product.childImageSharp.fluid} />
               <a href={product.url}>Shop Now</a>
-            </article>
+            </Carousel.Item>
           )
         })}
       </Carousel>
