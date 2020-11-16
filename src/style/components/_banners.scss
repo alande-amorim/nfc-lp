@@ -141,5 +141,16 @@
         }
       }
     }
+
+    .slider__info {
+      &.right {
+        left: initial;
+        right: 10%;
+        p,
+        h2 {
+          text-align: right;
+        }
+      }
+    }
   }
 }

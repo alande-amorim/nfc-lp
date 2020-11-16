@@ -17,6 +17,7 @@ const KidsFeatures = () => {
           type
           title
           text
+          textPosition
           fields {
             desktopImg {
               childImageSharp {
@@ -51,9 +52,15 @@ const KidsFeatures = () => {
 
       <SectionContent className="banners__slider" direction="left">
         <Carousel className="banners__slider__item" interval={null}>
-          {banners.map(({ id, title, text, fields: images }) => (
+          {banners.map(({ id, title, text, textPosition, fields: images }) => (
             <Carousel.Item key={id}>
-              <Banner background={images} key={id} title={title} text={text} />
+              <Banner
+                background={images}
+                key={id}
+                title={title}
+                text={text}
+                position={textPosition}
+              />
             </Carousel.Item>
           ))}
         </Carousel>

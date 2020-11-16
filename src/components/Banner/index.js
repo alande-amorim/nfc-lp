@@ -1,7 +1,7 @@
 import React from "react"
 import BackgroundImage from "gatsby-background-image"
 
-const Banner = ({ background, title, text }) => {
+const Banner = ({ background, title, text, position }) => {
   const imgSources = [
     background.mobileImg.childImageSharp.fluid,
     {
@@ -16,7 +16,7 @@ const Banner = ({ background, title, text }) => {
       tag="article"
       fluid={imgSources}
     >
-      <div className="slider__info">
+      <div className={`slider__info ${position}`}>
         <h2>{title}</h2>
         <p>{text}</p>
       </div>

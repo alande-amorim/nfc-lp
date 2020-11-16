@@ -3,6 +3,7 @@
     "type": "KIDS_FEATURES",
     "title": "Nusery Rhymes",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "textPosition": "left",
     "image": {
       "desktop": {
         "src": "../assets/banners/kids1.jpg"
@@ -16,6 +17,7 @@
     "type": "KIDS_FEATURES",
     "title": "Storytelling",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "textPosition": "right",
     "image": {
       "desktop": {
         "src": "../assets/banners/kids2.jpg"
@@ -29,6 +31,7 @@
     "type": "KIDS_FEATURES",
     "title": "Educational Content",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "textPosition": "left",
     "image": {
       "desktop": {
         "src": "../assets/banners/kids3.jpg"
@@ -40,8 +43,9 @@
   },
   {
     "type": "GROWNUP_FEATURES",
-    "title": "Educational Content",
+    "title": "Smart, fun & educative",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "textPosition": "left",
     "image": {
       "desktop": {
         "src": "../assets/banners/grown-ups1.jpg"
@@ -55,6 +59,7 @@
     "type": "GROWNUP_FEATURES",
     "title": "Share Picures",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "textPosition": "right",
     "image": {
       "desktop": {
         "src": "../assets/banners/grown-ups2.jpg"
@@ -68,6 +73,7 @@
     "type": "GROWNUP_FEATURES",
     "title": "Share Picures",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "textPosition": "left",
     "image": {
       "desktop": {
         "src": "../assets/banners/grown-ups3.jpg"
@@ -79,8 +85,9 @@
   },
   {
     "type": "GROWNUP_FEATURES",
-    "title": "Share Picures",
+    "title": "Share Videos",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "textPosition": "left",
     "image": {
       "desktop": {
         "src": "../assets/banners/grown-ups4.jpg"
