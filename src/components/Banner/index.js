@@ -17,12 +17,8 @@ const Banner = ({ background, title, text }) => {
       fluid={imgSources}
     >
       <div className="slider__info">
-        <h2>Share videos</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-          blanditiis aliquid incidunt culpa nam atque numquam recusandae
-          obcaecati ad commodi.
-        </p>
+        <h2>{title}</h2>
+        <p>{text}</p>
       </div>
     </BackgroundImage>
   )

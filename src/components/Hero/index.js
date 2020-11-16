@@ -80,10 +80,11 @@ const Hero = () => {
           fluid={clouds.childImageSharp.fluid}
           style={{
             position: "absolute",
-            bottom: 0,
+            top: 0,
             height: "200px",
             width: "100%",
             zIndex: 10,
+            backgroundPosition: "100px center",
           }}
         />
         <BackgroundImage
@@ -94,6 +95,8 @@ const Hero = () => {
             height: "200px",
             width: "100%",
             zIndex: 10,
+            display: "flex",
+            alignItems: "center",
           }}
         >
           <a href="#" className="btn">

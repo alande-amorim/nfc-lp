@@ -3,6 +3,7 @@
   min-height: 600px;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 
   .senior {
     width: 95vw;
@@ -70,6 +71,10 @@
   display: flex;
   bottom: 75px;
   position: relative;
+  height: 300px;
+  bottom: 145px;
+  width: 100%;
+  margin-bottom: -160px;
 
   .btn {
     height: 77px;
@@ -83,6 +88,12 @@
       max-height: 80vh;
       width: vwCalc(426 * 2);
       height: vwCalc(381 * 2);
+    }
+  }
+  .clouds {
+    margin-bottom: initial;
+    .btn {
+      width: 400px;
     }
   }
 }

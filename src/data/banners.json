@@ -1,27 +1,92 @@
 [
   {
-    "type": "GROWNUP_FEATURES",
-    "title": "Share Videos",
+    "type": "KIDS_FEATURES",
+    "title": "Nusery Rhymes",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
     "image": {
       "desktop": {
-        "src": "../assets/banners/grown-ups1.png"
+        "src": "../assets/banners/kids1.jpg"
       },
       "mobile": {
-        "src": "../assets/banners/mobile/grown-ups1.png"
+        "src": "../assets/banners/mobile/kids1.jpg"
+      }
+    }
+  },
+  {
+    "type": "KIDS_FEATURES",
+    "title": "Storytelling",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "image": {
+      "desktop": {
+        "src": "../assets/banners/kids2.jpg"
+      },
+      "mobile": {
+        "src": "../assets/banners/mobile/kids2.jpg"
+      }
+    }
+  },
+  {
+    "type": "KIDS_FEATURES",
+    "title": "Educational Content",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "image": {
+      "desktop": {
+        "src": "../assets/banners/kids3.jpg"
+      },
+      "mobile": {
+        "src": "../assets/banners/mobile/kids3.jpg"
       }
     }
   },
   {
     "type": "GROWNUP_FEATURES",
-    "title": "Share Pictures",
+    "title": "Educational Content",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
     "image": {
       "desktop": {
-        "src": "../assets/banners/kids1.png"
+        "src": "../assets/banners/grown-ups1.jpg"
       },
       "mobile": {
-        "src": "../assets/banners/mobile/kids1.png"
+        "src": "../assets/banners/mobile/grown-ups1.jpg"
+      }
+    }
+  },
+  {
+    "type": "GROWNUP_FEATURES",
+    "title": "Share Picures",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "image": {
+      "desktop": {
+        "src": "../assets/banners/grown-ups2.jpg"
+      },
+      "mobile": {
+        "src": "../assets/banners/mobile/grown-ups2.jpg"
+      }
+    }
+  },
+  {
+    "type": "GROWNUP_FEATURES",
+    "title": "Share Picures",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "image": {
+      "desktop": {
+        "src": "../assets/banners/grown-ups3.jpg"
+      },
+      "mobile": {
+        "src": "../assets/banners/mobile/grown-ups3.jpg"
+      }
+    }
+  },
+  {
+    "type": "GROWNUP_FEATURES",
+    "title": "Share Picures",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "image": {
+      "desktop": {
+        "src": "../assets/banners/grown-ups4.jpg"
+      },
+      "mobile": {
+        "src": "../assets/banners/mobile/grown-ups4.jpg"
       }
     }
   }

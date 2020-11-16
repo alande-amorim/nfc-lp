@@ -11,7 +11,7 @@ const KidsFeatures = () => {
     allBannersJson: { nodes: banners },
   } = useStaticQuery(graphql`
     {
-      allBannersJson(filter: { type: { eq: "GROWNUP_FEATURES" } }) {
+      allBannersJson(filter: { type: { eq: "KIDS_FEATURES" } }) {
         nodes {
           id
           type
@@ -39,6 +39,7 @@ const KidsFeatures = () => {
       }
     }
   `)
+
   return (
     <section className="banners kids right">
       <SectionText
