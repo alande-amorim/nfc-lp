@@ -11,9 +11,18 @@
         width: 300px;
         color: $white;
         z-index: 10;
-        top: 28%;
+        top: 18%;
         transform: translate(0, -50%);
         left: 10%;
+
+        &.right {
+          left: initial;
+          right: 10%;
+          p,
+          h2 {
+            text-align: right !important;
+          }
+        }
 
         h2 {
           font-size: 3rem;
@@ -92,37 +101,37 @@
 
   @keyframes animatedBackground {
     0% {
-      background-position-x: 0;
+      background-position: 0 0;
     }
     10% {
-      background-position-x: 0;
+      background-position: 0 0;
     }
     50% {
-      background-position-x: 100%;
+      background-position: 100% 100%;
     }
     60% {
-      background-position-x: 100%;
+      background-position: 100% 100%;
     }
     100% {
-      background-position-x: 0;
+      background-position: 0 0;
     }
   }
 
   @keyframes animatedBackgroundReverse {
     0% {
-      background-position-x: 100%;
+      background-position: 100% 100%;
     }
     10% {
-      background-position-x: 100%;
+      background-position: 100% 100%;
     }
     50% {
-      background-position-x: 0;
+      background-position: 0 0;
     }
     60% {
-      background-position-x: 0;
+      background-position: 0 0;
     }
     100% {
-      background-position-x: 100%;
+      background-position: 100% 100%;
     }
   }
 }
@@ -143,14 +152,7 @@
     }
 
     .slider__info {
-      &.right {
-        left: initial;
-        right: 10%;
-        p,
-        h2 {
-          text-align: right;
-        }
-      }
+      top: 28%;
     }
   }
 }

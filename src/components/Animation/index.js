@@ -25,6 +25,11 @@ const Animation = () => {
     }
   `)
 
+  const backgroundImageStack = [
+    background.childImageSharp.fluid,
+    bear.childImageSharp.fluid,
+  ].reverse()
+
   return (
     <section className="animation">
       <SectionText
@@ -34,18 +39,14 @@ const Animation = () => {
         direction="left"
       />
       <BackgroundImage
-        fluid={background.childImageSharp.fluid}
+        fluid={backgroundImageStack}
         className="section__content banners__slider background"
-      >
-        <BackgroundImage
-          fluid={bear.childImageSharp.fluid}
-          className="bear"
-          style={{
-            backgroundSize: "contain",
-            backgroundPosition: "center bottom",
-          }}
-        ></BackgroundImage>
-      </BackgroundImage>
+        style={{
+          backgroundPosition: "-175px 100% , bottom center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain, cover",
+        }}
+      />
     </section>
   )
 }

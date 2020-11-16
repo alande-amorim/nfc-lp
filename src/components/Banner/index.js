@@ -1,4 +1,5 @@
 import React from "react"
+import Slide from "react-reveal/Slide"
 import BackgroundImage from "gatsby-background-image"
 
 const Banner = ({ background, title, text, position }) => {
@@ -16,10 +17,12 @@ const Banner = ({ background, title, text, position }) => {
       tag="article"
       fluid={imgSources}
     >
-      <div className={`slider__info ${position}`}>
-        <h2>{title}</h2>
-        <p>{text}</p>
-      </div>
+      <Slide top>
+        <div className={`slider__info ${position}`}>
+          <h2>{title}</h2>
+          <p>{text}</p>
+        </div>
+      </Slide>
     </BackgroundImage>
   )
 }

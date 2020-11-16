@@ -1,13 +1,18 @@
 import React from "react"
+import Slide from "react-reveal/Slide"
 import PropTypes from "prop-types"
 
 const SectionText = ({ title, text, color, direction }) => {
   return (
     <div className={`section__text ${color} ${direction}`}>
-      <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>
-      <p>
-        <span>{text}</span>
-      </p>
+      <Slide left={direction === "left"} right={direction === "right"}>
+        <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>
+      </Slide>
+      <Slide left={direction === "right"} right={direction === "left"}>
+        <p>
+          <span>{text}</span>
+        </p>
+      </Slide>
     </div>
   )
 }

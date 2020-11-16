@@ -1,16 +1,18 @@
 .animation {
-  height: 200vh;
-  margin-bottom: 207px;
-
   .background {
     min-height: 200vh;
     position: relative;
-    background-attachment: fixed;
+
+    &#{&},
+    &:before,
+    &:after {
+      background-attachment: fixed;
+    }
   }
   .bear {
     width: 100%;
     min-height: 72vh;
-    position: absolute !important;
+    position: sticky !important;
     bottom: 0;
   }
 }
