@@ -38,7 +38,9 @@ const ChooseYours = () => {
           return (
             <Carousel.Item key={index} className="products__item">
               <Image fluid={product.fields.product.childImageSharp.fluid} />
-              <a href={product.url}>Shop Now</a>
+              <a className="btn" href={product.url}>
+                Shop Now
+              </a>
             </Carousel.Item>
           )
         })}

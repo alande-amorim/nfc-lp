@@ -5,58 +5,84 @@
   position: relative;
 
   .senior {
-    width: vwCalc(426 * 2);
-    height: vwCalc(381 * 2);
+    width: 95vw;
+    height: 84vw;
+    max-height: 60vh;
 
     position: absolute !important;
     z-index: 10;
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 0);
+
+    &:before,
+    &:after {
+      background-size: contain !important;
+    }
   }
 
-  &__thumbs-container {
-    position: relative;
-    height: 100vh;
-    .thumb {
-      width: vwCalc(569);
-      height: vwCalc(323);
-      position: absolute !important;
-      z-index: 11;
+  .thumb {
+    max-width: 460px;
+    min-width: 285px;
+    min-height: 162px;
+    width: vwCalc(569);
+    height: vwCalc(323);
+    position: absolute !important;
+    z-index: 11;
 
-      &:nth-child(1) {
-        width: vwCalc(454);
-        height: vwCalc(294);
-        z-index: 1;
-        left: 50%;
-        top: 5%;
-        transform: translate(0%, 0);
-      }
+    &:nth-child(1) {
+      width: vwCalc(454);
+      height: vwCalc(294);
+      z-index: 1;
+      left: 50%;
+      top: 5%;
+      transform: translate(0%, 0);
+    }
 
-      &:nth-child(2) {
-        width: vwCalc(412);
-        height: vwCalc(291);
-        z-index: 1;
-        left: 25%;
-        top: 5%;
-        transform: translate(-50%, 0);
-      }
+    &:nth-child(2) {
+      width: vwCalc(412);
+      height: vwCalc(291);
+      z-index: 1;
+      left: 25%;
+      top: 5%;
+      transform: translate(-50%, 0);
+    }
 
-      &:nth-child(3) {
-        top: 35%;
-        transform: translate(-20%, 0%);
-      }
+    &:nth-child(3) {
+      top: 35%;
+      transform: translate(-20%, 0%);
+    }
 
-      &:nth-child(4) {
-        bottom: 0;
-        transform: translate(0%, 0%);
-      }
+    &:nth-child(4) {
+      bottom: 0;
+      transform: translate(0%, 0%);
+    }
 
-      &:nth-child(5) {
-        bottom: -5%;
-        left: 50%;
-        transform: translate(0%, 0%);
-      }
+    &:nth-child(5) {
+      bottom: -5%;
+      left: 50%;
+      transform: translate(0%, 0%);
+    }
+  }
+}
+.clouds {
+  height: 300px;
+  display: flex;
+  bottom: 75px;
+  position: relative;
+
+  .btn {
+    height: 77px;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (min-width: $max-width-lg) {
+  .hero {
+    .senior {
+      max-height: 80vh;
+      width: vwCalc(426 * 2);
+      height: vwCalc(381 * 2);
     }
   }
 }

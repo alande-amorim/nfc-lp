@@ -11,7 +11,7 @@
         width: 300px;
         color: $white;
         z-index: 10;
-        top: 35%;
+        top: 28%;
         transform: translate(0, -50%);
         left: 10%;
 
@@ -59,11 +59,18 @@
 }
 
 @media screen and (max-width: $max-width-lg) {
+  .banner__background {
+    &#{&},
+    &:before,
+    &:after {
+      background-position-y: bottom !important;
+    }
+  }
+
   .left {
     .banner__background {
       animation: animatedBackground 60s infinite;
-
-      &#{&},
+      background-position &#{&},
       &:before,
       &:after {
         animation: animatedBackground 60s infinite;
@@ -85,37 +92,37 @@
 
   @keyframes animatedBackground {
     0% {
-      background-position: 0 0;
+      background-position-x: 0;
     }
     10% {
-      background-position: 0 0;
+      background-position-x: 0;
     }
     50% {
-      background-position: 100% 0;
+      background-position-x: 100%;
     }
     60% {
-      background-position: 100% 0;
+      background-position-x: 100%;
     }
     100% {
-      background-position: 0 0;
+      background-position-x: 0;
     }
   }
 
   @keyframes animatedBackgroundReverse {
     0% {
-      background-position: 100% 0;
+      background-position-x: 100%;
     }
     10% {
-      background-position: 100% 0;
+      background-position-x: 100%;
     }
     50% {
-      background-position: 0 0;
+      background-position-x: 0;
     }
     60% {
-      background-position: 0 0;
+      background-position-x: 0;
     }
     100% {
-      background-position: 100% 0;
+      background-position-x: 100%;
     }
   }
 }

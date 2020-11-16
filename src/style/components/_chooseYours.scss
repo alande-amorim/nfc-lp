@@ -22,19 +22,11 @@
     // width: 580px;
     // height: 610px;
 
-    a {
+    .btn {
       position: absolute;
-      background-color: #fdd866;
-      color: #fff;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 1rem 1rem;
-      border-radius: 3rem;
-      bottom: 1rem;
       left: 50%;
       transform: translate(-50%, 0);
       width: 60%;
-      text-align: center;
     }
 
     &:nth-child(1),

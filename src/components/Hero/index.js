@@ -4,11 +4,19 @@ import BackgroundImage from "gatsby-background-image"
 import Image from "gatsby-image"
 
 const Hero = () => {
-  const { bg, senior, thumbs } = useStaticQuery(graphql`
+  const { clouds, bg, senior, thumbs } = useStaticQuery(graphql`
     {
       bg: file(relativePath: { eq: "hero/hero-bg.png" }) {
         childImageSharp {
           fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      clouds: file(relativePath: { eq: "hero/clouds-bg.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -41,29 +49,59 @@ const Hero = () => {
       }
     }
   `)
-
   return (
-    <BackgroundImage
-      tag={`section`}
-      className="hero"
-      fluid={bg.childImageSharp.fluid}
-    >
-      <div className="hero__content-wrapper content-wrap">
-        <Image fluid={senior.childImageSharp.fluid} className="senior" />
+    <>
+      <BackgroundImage
+        tag={`section`}
+        className="hero"
+        fluid={bg.childImageSharp.fluid}
+      >
+        <div className="hero__content-wrapper content-wrap">
+          <BackgroundImage
+            fluid={senior.childImageSharp.fluid}
+            className="senior"
+          />
 
-        <section className="hero__thumbs-container">
-          {thumbs.nodes.map((thumb, index) => {
-            return (
-              <Image
-                fluid={thumb.childImageSharp.fluid}
-                className={`thumb`}
-                key={index}
-              />
-            )
-          })}
-        </section>
+          <section className="hero__thumbs-container">
+            {thumbs.nodes.map((thumb, index) => {
+              return (
+                <BackgroundImage
+                  fluid={thumb.childImageSharp.fluid}
+                  className={`thumb`}
+                  key={index}
+                />
+              )
+            })}
+          </section>
+        </div>
+      </BackgroundImage>
+      <div className="clouds">
+        <BackgroundImage
+          fluid={clouds.childImageSharp.fluid}
+          style={{
+            position: "absolute",
+            bottom: 0,
+            height: "200px",
+            width: "100%",
+            zIndex: 10,
+          }}
+        />
+        <BackgroundImage
+          fluid={clouds.childImageSharp.fluid}
+          style={{
+            position: "absolute",
+            bottom: 0,
+            height: "200px",
+            width: "100%",
+            zIndex: 10,
+          }}
+        >
+          <a href="#" className="btn">
+            Shop Now
+          </a>
+        </BackgroundImage>
       </div>
-    </BackgroundImage>
+    </>
   )
 }
 
