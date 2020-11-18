@@ -23,6 +23,7 @@ const HeroCta = () => {
 
   return (
     <Parallax
+      className=""
       y={["0px", "-550px"]}
       tagOuter="div"
       styleOuter={{
@@ -31,14 +32,7 @@ const HeroCta = () => {
     >
       <BackgroundImage
         fluid={backgroundCloudsStack}
-        className="cloudCta"
-        style={{
-          width: "100%",
-          height: "45rem",
-          margin: "-9rem 0 -18rem 0px",
-          display: "flex",
-          alignItems: "center",
-        }}
+        className="cloud-container"
       >
         <a href="#" className="btn" style={{ width: "600px" }}>
           Shop Now

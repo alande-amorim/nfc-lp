@@ -3,6 +3,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { Parallax } from "react-scroll-parallax"
 
+import Thumb from "../Thumb"
+
 const Hero = () => {
   const { clouds, bg, senior, thumbs } = useStaticQuery(graphql`
     {
@@ -68,13 +70,12 @@ const Hero = () => {
 
         {thumbs.nodes.map((thumb, index) => {
           return (
-            <Parallax y={["500px", "-220px"]} tagOuter="div">
-              <BackgroundImage
-                fluid={thumb.childImageSharp.fluid}
-                className={`thumb`}
-                key={index}
-              />
-            </Parallax>
+            <Thumb
+              key={index}
+              fluid={thumb.childImageSharp.fluid}
+              y={["220px", "10px"]}
+              x={[22, 22]}
+            />
           )
         })}
 

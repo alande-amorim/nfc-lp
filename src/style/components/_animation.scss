@@ -6,9 +6,9 @@
     &#{&},
     &:before,
     &:after {
-      background-attachment: fixed;
+      background-attachment: fixed, fixed;
       // transition: opacity 0.5s ease 250ms;
-      background-position: 18% 115%, center 0% !important;
+      background-position: 18% 100%, center 0% !important;
       background-repeat: no-repeat !important;
       background-size: 325%, 500% !important;
     }
@@ -19,6 +19,15 @@
     position: sticky !important;
     bottom: 0;
   }
+  &.not-attached {
+    .background {
+      &#{&},
+      &:before,
+      &:after {
+        background-attachment: local, fixed;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: $max-width-lg) {
@@ -27,7 +36,7 @@
       &:before,
       &:after {
         // background-position: -175px 130%, bottom center !important;
-        background-position: 0 130%, bottom center !important;
+        background-position: 0 100%, bottom center !important;
         background-repeat: no-repeat !important;
         background-size: 100%, cover !important;
         animation: zoomBear 5s infinite;

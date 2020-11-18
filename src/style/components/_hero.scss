@@ -36,39 +36,39 @@
     position: absolute !important;
     z-index: 11;
 
-    &:nth-child(1) {
-      width: vwCalc(454);
-      height: vwCalc(294);
-      z-index: 1;
-      left: 50%;
-      top: 5%;
-      transform: translate(0%, 0);
-    }
+    // &:nth-child(1) {
+    //   width: vwCalc(454);
+    //   height: vwCalc(294);
+    //   z-index: 1;
+    //   left: 50%;
+    //   top: 5%;
+    //   transform: translate(0%, 0);
+    // }
 
-    &:nth-child(2) {
-      width: vwCalc(412);
-      height: vwCalc(291);
-      z-index: 1;
-      left: 25%;
-      top: 5%;
-      transform: translate(-50%, 0);
-    }
+    // &:nth-child(2) {
+    //   width: vwCalc(412);
+    //   height: vwCalc(291);
+    //   z-index: 1;
+    //   left: 25%;
+    //   top: 5%;
+    //   transform: translate(-50%, 0);
+    // }
 
-    &:nth-child(3) {
-      top: 35%;
-      transform: translate(-20%, 0%);
-    }
+    // &:nth-child(3) {
+    //   top: 35%;
+    //   transform: translate(-20%, 0%);
+    // }
 
-    &:nth-child(4) {
-      bottom: 0;
-      transform: translate(0%, 0%);
-    }
+    // &:nth-child(4) {
+    //   bottom: 0;
+    //   transform: translate(0%, 0%);
+    // }
 
-    &:nth-child(5) {
-      bottom: -5%;
-      left: 50%;
-      transform: translate(0%, 0%);
-    }
+    // &:nth-child(5) {
+    //   bottom: -5%;
+    //   left: 50%;
+    //   transform: translate(0%, 0%);
+    // }
   }
 }
 
