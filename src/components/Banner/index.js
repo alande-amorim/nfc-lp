@@ -18,7 +18,7 @@ const Banner = ({ background, title, text, position }) => {
       tag="article"
       fluid={imgSources}
     >
-      <Parallax y={["100px", "300px"]} tagOuter="div">
+      <Parallax y={["100px", "210px"]} tagOuter="div">
         {/* <Slide top> */}
         <div className={`slider__info ${position}`}>
           <h2>{title}</h2>
