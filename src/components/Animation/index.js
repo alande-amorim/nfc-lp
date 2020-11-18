@@ -1,117 +1,61 @@
 import React, { useState, useEffect, useRef } from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
-
+import { useWindowSize } from "../../hooks/useWindowSize"
 import SectionText from "../SectionText"
+import videoSource from "../../assets/animation/banner.mp4"
 
 const Animation = () => {
-  const { mobile, background, bear } = useStaticQuery(graphql`
-    {
-      mobile: file(relativePath: { eq: "animation/mobile.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 600, quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-      background: file(relativePath: { eq: "animation/bg-blur.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000, quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-      bear: file(relativePath: { eq: "animation/bear1.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000, quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+  // const [progress, setProgress] = useState(0)
+
+  const { height: screenHeight } = useWindowSize()
+
+  const container = useRef(null)
+  const video = useRef(null)
+
+  const handleScroll = () => {
+    const progress = calcProgress()
+    setPlayback(progress)
+    window.requestAnimationFrame(handleScroll)
+  }
+
+  function calcProgress() {
+    const { bottom, height, top } = container.current.getBoundingClientRect()
+    if (top <= screenHeight && bottom >= screenHeight) {
+      // console.log(((screenHeight - top) / height) * 100)
+
+      return ((screenHeight - top) / height) * 100
+    } else {
+      return false
     }
-  `)
+  }
 
-  const [bgAttached, setBgAttached] = useState("attached")
-  const { height } = useWindowSize()
-
-  const backgroundImageStack = [
-    background.childImageSharp.fluid,
-    bear.childImageSharp.fluid,
-  ].reverse()
-
-  const element = useRef(null)
+  function setPlayback(progress) {
+    const videoEl = video.current
+    if (!!progress) {
+      videoEl.currentTime = videoEl.duration * (progress / 100)
+    }
+  }
 
   useEffect(() => {
-    document.addEventListener("scroll", _ => {
-      const { bottom, top } = element.current.selfRef.getBoundingClientRect()
-      console.log(top)
-      if (height) {
-        const newState = bottom <= height
-        setBgAttached(newState ? "not-attached" : "attached")
-      }
-    })
-  })
+    if (typeof window !== "undefined" && typeof screenHeight !== "undefined") {
+      window.requestAnimationFrame(handleScroll)
+    }
+  }, [screenHeight])
 
   return (
-    <section className={`animation ${bgAttached}`}>
+    <section className={`animation`} style={{ height: "500vh" }}>
       <SectionText
         title="... and <br>Momento Bear <br>is the chest."
         text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
         color="red"
         direction="left"
       />
-      <BackgroundImage
-        fluid={backgroundImageStack}
-        className="background"
-        ref={element}
-      />
-
-      {/* <BackgroundImage
-        fluid={mobile.childImageSharp.fluid}
-        className="mobile"
-        style={{
-          width: "600px",
-          height: "692px",
-        }}
-      /> */}
+      <div className="video-container" ref={container}>
+        <video ref={video}>
+          <source src={videoSource} type="video/mp4" />
+        </video>
+      </div>
     </section>
   )
-}
-
-// Hook
-function useWindowSize() {
-  // Initialize state with undefined width/height so server and client renders match
-  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  })
-
-  useEffect(() => {
-    // Handler to call on window resize
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      })
-
-      // Set window width/height to state
-    }
-
-    // Add event listener
-    window.addEventListener("resize", handleResize)
-
-    // Call handler right away so state gets updated with initial window size
-    handleResize()
-
-    // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleResize)
-  }, []) // Empty array ensures that effect is only run on mount
-
-  return windowSize
 }
 
 export default Animation

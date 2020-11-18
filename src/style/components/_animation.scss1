@@ -1,0 +1,61 @@
+.animation {
+  .background {
+    min-height: 200vh;
+    position: relative;
+
+    &:before,
+    &:after {
+      background-attachment: fixed, fixed, fixed;
+      // transition: opacity 0.5s ease 250ms;
+      background-position: center bottom, 18% 100%, center 0% !important;
+      background-repeat: no-repeat !important;
+      background-size: 325%, 500% !important;
+
+      // animation-play-state: paused;
+      // animation-delay: calc(var(--scroll) * -1s);
+      // animation-iteration-count: 1;
+      // animation-fill-mode: both;
+      // animation: zoomBear 5s linear infinite;
+    }
+  }
+
+  &.not-attached {
+    .background {
+      &#{&},
+      &:before,
+      &:after {
+        background-attachment: local, local, fixed;
+        // background-attachment: inherit, inherit, inherit !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $max-width-lg) {
+  .animation {
+    .background {
+      &:before,
+      &:after {
+        // background-position: -175px 130%, bottom center !important;
+        background-position: 80% bottom, 0 100%, bottom center !important;
+        background-repeat: no-repeat !important;
+        background-size: 600px, 100%, cover !important;
+      }
+    }
+  }
+}
+
+@keyframes zoomBear {
+  0% {
+    opacity: 1;
+    width: 100%;
+  }
+  50% {
+    opacity: 0;
+    width: 50%;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}

@@ -1,53 +1,23 @@
 .animation {
-  .background {
-    min-height: 200vh;
-    position: relative;
+  height: 500vh;
 
-    &#{&},
-    &:before,
-    &:after {
-      background-attachment: fixed, fixed;
-      // transition: opacity 0.5s ease 250ms;
-      background-position: 18% 100%, center 0% !important;
-      background-repeat: no-repeat !important;
-      background-size: 325%, 500% !important;
-    }
+  .video-container {
+    height: calc(100% - 207px);
   }
-  .bear {
-    width: 100%;
-    min-height: 72vh;
-    position: sticky !important;
-    bottom: 0;
-  }
-  &.not-attached {
-    .background {
-      &#{&},
-      &:before,
-      &:after {
-        background-attachment: local, fixed;
-      }
-    }
-  }
-}
 
-@media screen and (min-width: $max-width-lg) {
-  .animation {
-    .background {
-      &:before,
-      &:after {
-        // background-position: -175px 130%, bottom center !important;
-        background-position: 0 100%, bottom center !important;
-        background-repeat: no-repeat !important;
-        background-size: 100%, cover !important;
-        animation: zoomBear 5s infinite;
-        transition: background-position 2s;
-      }
-    }
-  }
-}
+  // position: relative;
+  video {
+    height: 100vh;
+    position: sticky;
+    top: 0;
 
-@keyframes zoomBear {
-  50% {
-    background-position: center center, bottom center !important;
+    &.fixed {
+      position: fixed;
+      bottom: 0;
+    }
+
+    &.bottom {
+      // bottom: 0;
+    }
   }
 }

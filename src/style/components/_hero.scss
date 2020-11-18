@@ -95,6 +95,13 @@
       width: vwCalc(426 * 2);
       height: vwCalc(381 * 2);
     }
+
+    &#{&},
+    &:before,
+    &:after {
+      background-position: center 200%, center center !important;
+      background-size: 100% auto, cover !important;
+    }
   }
   .clouds {
     display: flex;
@@ -104,12 +111,6 @@
     height: 22vw;
     width: 100vw;
     z-index: 10;
-
-    &#{&},
-    &:before,
-    &:after {
-      background-position: top center, top center !important;
-    }
 
     margin-bottom: initial;
     .btn {
