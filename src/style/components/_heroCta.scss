@@ -20,5 +20,6 @@
 @media screen and (min-width: $max-width-lg) {
   .cloud-container {
     margin: -9rem 0 -18rem 0px;
+    max-height: initial;
   }
 }
