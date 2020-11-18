@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { ParallaxProvider } from "react-scroll-parallax"
 
 import SEO from "../SEO"
 import Header from "../Header"
@@ -24,7 +25,9 @@ const Layout = ({ children }) => {
     <>
       <SEO title="Home" />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main>{children}</main>
+      <ParallaxProvider>
+        <main>{children}</main>
+      </ParallaxProvider>
       <Footer />
     </>
   )

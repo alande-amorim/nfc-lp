@@ -55,7 +55,8 @@ a.btn {
 
 .slick-list {
   overflow: visible;
-}
-.slick-slide {
-  text-align: center;
+  .slick-slide {
+    text-align: center;
+    // margin: 0 10px;
+  }
 }

@@ -6,7 +6,10 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer__copyright">
-        <p>&copy; Momento Bear 2020 - Registered Trademark</p>
+        <p>
+          &copy; Momento Bear 2020 - <br />
+          Registered Trademark
+        </p>
       </div>
 
       <ColorfulBar inverted />

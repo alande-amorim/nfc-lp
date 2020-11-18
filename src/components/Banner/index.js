@@ -1,6 +1,7 @@
 import React from "react"
 import Slide from "react-reveal/Slide"
 import BackgroundImage from "gatsby-background-image"
+import { Parallax } from "react-scroll-parallax"
 
 const Banner = ({ background, title, text, position }) => {
   const imgSources = [
@@ -17,12 +18,14 @@ const Banner = ({ background, title, text, position }) => {
       tag="article"
       fluid={imgSources}
     >
-      <Slide top>
+      <Parallax y={["100px", "300px"]} tagOuter="div">
+        {/* <Slide top> */}
         <div className={`slider__info ${position}`}>
           <h2>{title}</h2>
           <p>{text}</p>
         </div>
-      </Slide>
+        {/* </Slide> */}
+      </Parallax>
     </BackgroundImage>
   )
 }

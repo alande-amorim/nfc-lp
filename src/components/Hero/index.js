@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import { Parallax } from "react-scroll-parallax"
 
 const Hero = () => {
   const { clouds, bg, senior, thumbs } = useStaticQuery(graphql`
@@ -48,62 +49,49 @@ const Hero = () => {
       }
     }
   `)
-  return (
-    <>
-      <BackgroundImage
-        tag={`section`}
-        className="hero"
-        fluid={bg.childImageSharp.fluid}
-      >
-        <div className="hero__content-wrapper content-wrap">
-          <BackgroundImage
-            fluid={senior.childImageSharp.fluid}
-            className="senior"
-          />
+  const backgroundCloudsStack = [
+    clouds.childImageSharp.fluid,
+    clouds.childImageSharp.fluid,
+  ].reverse()
 
-          <section className="hero__thumbs-container">
-            {thumbs.nodes.map((thumb, index) => {
-              return (
-                <BackgroundImage
-                  fluid={thumb.childImageSharp.fluid}
-                  className={`thumb`}
-                  key={index}
-                />
-              )
-            })}
-          </section>
-        </div>
-      </BackgroundImage>
-      <div className="clouds">
+  return (
+    <BackgroundImage
+      tag={`section`}
+      className="hero"
+      fluid={bg.childImageSharp.fluid}
+    >
+      <div className="hero__content-wrapper">
         <BackgroundImage
-          fluid={clouds.childImageSharp.fluid}
-          style={{
-            position: "absolute",
-            top: 0,
-            height: "200px",
-            width: "100%",
-            zIndex: 10,
-            backgroundPosition: "100px center",
-          }}
+          fluid={senior.childImageSharp.fluid}
+          className="senior"
         />
-        <BackgroundImage
-          fluid={clouds.childImageSharp.fluid}
-          style={{
+
+        {thumbs.nodes.map((thumb, index) => {
+          return (
+            <Parallax y={["500px", "-220px"]} tagOuter="div">
+              <BackgroundImage
+                fluid={thumb.childImageSharp.fluid}
+                className={`thumb`}
+                key={index}
+              />
+            </Parallax>
+          )
+        })}
+
+        {/* <Parallax
+          y={["0px", "500px"]}
+          tagOuter="div"
+          styleOuter={{
+            left: 0,
             position: "absolute",
-            bottom: 0,
-            height: "200px",
-            width: "100%",
+            bottom: "0%",
             zIndex: 10,
-            display: "flex",
-            alignItems: "center",
           }}
         >
-          <a href="#" className="btn">
-            Shop Now
-          </a>
-        </BackgroundImage>
+          <BackgroundImage fluid={backgroundCloudsStack} className="clouds" />
+        </Parallax> */}
       </div>
-    </>
+    </BackgroundImage>
   )
 }
 
