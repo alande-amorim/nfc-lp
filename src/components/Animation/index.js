@@ -4,7 +4,7 @@ import SectionText from "../SectionText"
 import videoSource from "../../assets/animation/banner.mp4"
 
 const Animation = () => {
-  // const [progress, setProgress] = useState(0)
+  const [frame, setFrame] = useState(0)
 
   const { height: screenHeight } = useWindowSize()
 
@@ -31,7 +31,12 @@ const Animation = () => {
   function setPlayback(progress) {
     const videoEl = video.current
     if (!!progress) {
-      videoEl.currentTime = videoEl.duration * (progress / 100)
+      var frameNumber = videoEl.duration * (progress / 100)
+      if (frameNumber !== frame) {
+        setFrame(frameNumber)
+        videoEl.currentTime = frameNumber
+        console.log(frameNumber)
+      }
     }
   }
 
@@ -42,7 +47,7 @@ const Animation = () => {
   }, [screenHeight])
 
   return (
-    <section className={`animation`} style={{ height: "500vh" }}>
+    <section className={`animation`} style={{ height: "1000vh" }}>
       <SectionText
         title="... and <br>Momento Bear <br>is the chest."
         text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
