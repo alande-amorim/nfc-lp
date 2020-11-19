@@ -48,7 +48,7 @@ const Animation = () => {
         direction="left"
       />
       <div className="video-container" ref={container}>
-        <video ref={video}>
+        <video ref={video} loop>
           <source src={videoSource} type="video/mp4" />
         </video>
       </div>
