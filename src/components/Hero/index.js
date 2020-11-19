@@ -73,11 +73,29 @@ const Hero = () => {
           fluid={thumbs[0].childImageSharp.fluid}
           y={["10px", "100px"]}
           x={[22, 22]}
-          z={0.7}
+          z={1}
         />
 
         <Thumb
           fluid={thumbs[1].childImageSharp.fluid}
+          y={["110px", "10px"]}
+          x={[60, 60]}
+        />
+
+        <Thumb
+          fluid={thumbs[2].childImageSharp.fluid}
+          y={["110px", "10px"]}
+          x={[60, 60]}
+        />
+
+        <Thumb
+          fluid={thumbs[3].childImageSharp.fluid}
+          y={["110px", "10px"]}
+          x={[60, 60]}
+        />
+
+        <Thumb
+          fluid={thumbs[4].childImageSharp.fluid}
           y={["110px", "10px"]}
           x={[60, 60]}
         />
