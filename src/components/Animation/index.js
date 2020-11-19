@@ -5,6 +5,7 @@ import videoSource from "../../assets/animation/banner.mp4"
 
 const Animation = () => {
   const [frame, setFrame] = useState(0)
+  const [playing, setPlaying] = useState(false)
 
   const { height: screenHeight } = useWindowSize()
 
@@ -12,32 +13,24 @@ const Animation = () => {
   const video = useRef(null)
 
   const handleScroll = () => {
-    const progress = calcProgress()
-    setPlayback(progress)
+    const { bottom, height, top } = container.current.getBoundingClientRect()
+    if (top <= 0 && bottom > screenHeight) {
+      playVideo()
+    } else {
+      pauseVideo()
+    }
+
     window.requestAnimationFrame(handleScroll)
   }
 
-  function calcProgress() {
-    const { bottom, height, top } = container.current.getBoundingClientRect()
-    if (top <= screenHeight && bottom >= screenHeight) {
-      // console.log(((screenHeight - top) / height) * 100)
-
-      return ((screenHeight - top) / height) * 100
-    } else {
-      return false
-    }
+  const playVideo = () => {
+    setPlaying(true)
+    video.current.play()
   }
 
-  function setPlayback(progress) {
-    const videoEl = video.current
-    if (!!progress) {
-      var frameNumber = videoEl.duration * (progress / 100)
-      if (frameNumber !== frame) {
-        setFrame(frameNumber)
-        videoEl.currentTime = frameNumber
-        console.log(frameNumber)
-      }
-    }
+  const pauseVideo = () => {
+    setPlaying(false)
+    video.current.pause()
   }
 
   useEffect(() => {
@@ -47,7 +40,7 @@ const Animation = () => {
   }, [screenHeight])
 
   return (
-    <section className={`animation`} style={{ height: "1000vh" }}>
+    <section className={`animation`} style={{ height: "200vh" }}>
       <SectionText
         title="... and <br>Momento Bear <br>is the chest."
         text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
