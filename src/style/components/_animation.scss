@@ -4,25 +4,19 @@
   .video-container {
     height: calc(100% - 407px);
     margin-top: -1rem;
+    width: 100vw;
+
+    video {
+      height: 100vh;
+      width: 100%;
+      max-width: 100vw;
+      position: sticky;
+      top: 0;
+      object-fit: cover;
+    }
   }
 
   // position: relative;
-  video {
-    height: 100vh;
-    width: 100vw;
-    position: sticky;
-    top: 0;
-    object-fit: cover;
-
-    &.fixed {
-      position: fixed;
-      bottom: 0;
-    }
-
-    &.bottom {
-      // bottom: 0;
-    }
-  }
 }
 
 @media screen and (min-width: $max-width-lg) {
