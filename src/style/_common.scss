@@ -16,21 +16,13 @@ body {
   @include font-base;
   background: $white;
   width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
 }
 
 .content-wrap {
   padding: 0 1rem;
   margin: 0 auto;
-}
-
-@media screen and (min-width: $max-width-lg) {
-  .carousel-indicators {
-    margin-bottom: 5rem;
-  }
-  .content-wrap {
-    width: 1280px;
-  }
 }
 
 a.btn {
@@ -58,5 +50,14 @@ a.btn {
   .slick-slide {
     text-align: center;
     // margin: 0 10px;
+  }
+}
+
+@media screen and (min-width: $max-width-lg) {
+  .carousel-indicators {
+    margin-bottom: 5rem;
+  }
+  .content-wrap {
+    width: 1280px;
   }
 }

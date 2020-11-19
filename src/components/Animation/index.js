@@ -5,7 +5,7 @@ import { useDeviceDetect } from "../../hooks/useDeviceDetect"
 
 import SectionText from "../SectionText"
 import desktopVideo from "../../assets/animation/banner.mp4"
-import mobileVideo from "../../assets/animation/banner-mobile.mp4"
+import mobileVideo from "../../assets/animation/banner-mobile-light.mp4"
 
 const Animation = () => {
   const [frame, setFrame] = useState(0)
@@ -45,7 +45,7 @@ const Animation = () => {
   }, [screenHeight])
 
   return (
-    <section className={`animation`} style={{ height: "200vh" }}>
+    <section className={`animation`}>
       <SectionText
         title="... and <br>Momento Bear <br>is the chest."
         text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."

@@ -28,6 +28,8 @@ const HeroCta = () => {
       tagOuter="div"
       styleOuter={{
         margin: "0 auto",
+        position: "relative",
+        zIndex: 10,
       }}
     >
       <BackgroundImage
