@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 
 import { useWindowSize } from "../../hooks/useWindowSize"
-import { useDeviceDetect } from "../../hooks/useDeviceDetect"
+import useDeviceDetect from "../../hooks/useDeviceDetect"
 
 import SectionText from "../SectionText"
 import desktopVideo from "../../assets/animation/banner.mp4"
@@ -42,7 +42,7 @@ const Animation = () => {
     if (typeof window !== "undefined" && typeof screenHeight !== "undefined") {
       window.requestAnimationFrame(handleScroll)
     }
-  }, [screenHeight])
+  }, [isMobile])
 
   return (
     <section className={`animation`}>
@@ -53,12 +53,16 @@ const Animation = () => {
         direction="left"
       />
       <div className="video-container" ref={container}>
-        <video ref={video} loop muted playsInline>
-          <source
-            src={isMobile ? mobileVideo : desktopVideo}
-            type="video/mp4"
-          />
-        </video>
+        {isMobile && (
+          <video loop muted playsInline ref={video}>
+            <source src={mobileVideo} type="video/mp4" />
+          </video>
+        )}
+        {!isMobile && (
+          <video loop muted playsInline ref={video}>
+            <source src={desktopVideo} type="video/mp4" />
+          </video>
+        )}
       </div>
     </section>
   )

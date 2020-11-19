@@ -1,6 +1,6 @@
 .products {
   display: block;
-  padding: 120px 0;
+  padding: 100px 0;
   overflow: hidden;
 
   h2 {
@@ -8,7 +8,7 @@
     color: $gray2;
     width: 100%;
     max-width: 800px;
-    margin: 0 auto 80px;
+    margin: 0 auto 60px;
     text-align: center;
     padding: 0 2rem;
   }
@@ -19,13 +19,20 @@
   }
 
   &__item {
-    width: 95% !important;
+    width: 100% !important;
     max-width: 600px;
     max-height: 629px;
 
     height: 100vw * 1.0483333333333333;
     position: relative;
     outline: none;
+
+    &#{&},
+    &:before,
+    &:after {
+      background-size: contain !important;
+    }
+
     .btn {
       position: absolute;
       left: 50%;
@@ -40,6 +47,19 @@
   }
 }
 
+@media screen and (max-width: $max-width-lg) {
+  .products {
+    &__item {
+      width: 95% !important;
+      height: 99.5vw;
+    }
+    .slick-current {
+      .products__item {
+        animation: hoverSwing 10s infinite;
+      }
+    }
+  }
+}
 @media screen and (min-width: $max-width-lg) {
   .products {
     h2 {
