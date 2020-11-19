@@ -42,7 +42,7 @@ const Animation = () => {
     if (typeof window !== "undefined" && typeof screenHeight !== "undefined") {
       window.requestAnimationFrame(handleScroll)
     }
-  }, [isMobile])
+  }, [isMobile, screenHeight])
 
   return (
     <section className={`animation`}>
