@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react"
+
 import { useWindowSize } from "../../hooks/useWindowSize"
+import { useDeviceDetect } from "../../hooks/useDeviceDetect"
+
 import SectionText from "../SectionText"
 import desktopVideo from "../../assets/animation/banner.mp4"
 import mobileVideo from "../../assets/animation/banner-mobile.mp4"
@@ -8,6 +11,7 @@ const Animation = () => {
   const [frame, setFrame] = useState(0)
   const [playing, setPlaying] = useState(false)
 
+  const { isMobile } = useDeviceDetect()
   const { height: screenHeight } = useWindowSize()
 
   const container = useRef(null)
@@ -49,8 +53,11 @@ const Animation = () => {
         direction="left"
       />
       <div className="video-container" ref={container}>
-        <video ref={video} loop muted playsinline class>
-          <source src={mobileVideo} type="video/mp4" />
+        <video ref={video} loop muted playsInline>
+          <source
+            src={isMobile ? mobileVideo : desktopVideo}
+            type="video/mp4"
+          />
         </video>
       </div>
     </section>
