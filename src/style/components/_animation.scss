@@ -25,7 +25,9 @@
 }
 
 @media screen and (min-width: $max-width-lg) {
-  .video-container {
-    height: calc(100% - 207px);
+  .animation {
+    .video-container {
+      height: calc(100% - 207px);
+    }
   }
 }
