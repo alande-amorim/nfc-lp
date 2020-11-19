@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react"
 import { useWindowSize } from "../../hooks/useWindowSize"
 import SectionText from "../SectionText"
-import videoSource from "../../assets/animation/banner.mp4"
+import desktopVideo from "../../assets/animation/banner.mp4"
+import mobileVideo from "../../assets/animation/banner-mobile.mp4"
 
 const Animation = () => {
   const [frame, setFrame] = useState(0)
@@ -48,8 +49,8 @@ const Animation = () => {
         direction="left"
       />
       <div className="video-container" ref={container}>
-        <video ref={video} loop>
-          <source src={videoSource} type="video/mp4" />
+        <video ref={video} loop muted playsinline class>
+          <source src={mobileVideo} type="video/mp4" />
         </video>
       </div>
     </section>
