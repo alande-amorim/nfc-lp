@@ -25,6 +25,10 @@
         @include font-secondary;
         font-size: 1.4rem;
         margin: 0;
+        font-weight: 700;
+      }
+      p {
+        @include font-secondary;
       }
     }
   }

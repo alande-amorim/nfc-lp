@@ -2,6 +2,10 @@
   position: relative;
 
   &__slider {
+    p {
+      font-size: 1.1rem;
+    }
+
     &__item {
       position: relative;
       .banner__background {

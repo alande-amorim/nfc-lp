@@ -7,8 +7,7 @@ const Footer = () => {
     <footer>
       <div className="footer__copyright">
         <p>
-          &copy; Momento Bear 2020 - <br />
-          Registered Trademark
+          &copy; <b>Momento Bear </b>2020 - Registered Trademark
         </p>
       </div>
 

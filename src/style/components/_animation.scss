@@ -1,5 +1,6 @@
 .animation {
   height: 250vh;
+  margin-bottom: 60px;
 
   .video-container {
     height: calc(100% - 407px);
@@ -22,6 +23,7 @@
 @media screen and (min-width: $max-width-lg) {
   .animation {
     height: 200vh;
+    margin-bottom: 0;
     .video-container {
       height: calc(100% - 207px);
       margin-top: initial;

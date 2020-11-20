@@ -48,7 +48,7 @@ const Animation = () => {
     <section className={`animation`}>
       <SectionText
         title="... and <br>Momento Bear <br>is the chest."
-        text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+        text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit."
         color="red"
         direction="left"
       />

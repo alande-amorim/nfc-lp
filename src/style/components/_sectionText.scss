@@ -48,6 +48,7 @@
     display: flex;
     align-items: center;
     width: 100%;
+    top: 1px;
 
     span {
       font-size: 1rem;
@@ -137,6 +138,8 @@
       height: 320px;
       width: 55%;
       padding: 0 120px;
+      top: initial;
+
       span {
         font-size: 1.2rem;
         line-height: 1.8rem;
