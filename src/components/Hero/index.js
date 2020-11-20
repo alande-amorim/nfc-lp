@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import Image from "gatsby-image"
 import { Parallax } from "react-scroll-parallax"
 
 import Thumb from "../Thumb"
@@ -10,12 +11,13 @@ const Hero = () => {
     clouds,
     bg,
     senior,
+    txt,
     thumbs: { nodes: thumbs },
   } = useStaticQuery(graphql`
     {
-      bg: file(relativePath: { eq: "hero/hero-bg.png" }) {
+      bg: file(relativePath: { eq: "hero/hero-bg.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -40,22 +42,31 @@ const Hero = () => {
           }
         }
       }
+      txt: file(relativePath: { eq: "hero/txt.png" }) {
+        childImageSharp {
+          fixed(width: 438, quality: 100) {
+            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
 
       thumbs: allFile(
         sort: { order: ASC, fields: name }
-        filter: { relativePath: { regex: "hero/thumb.*.png$/" } }
+        filter: { relativePath: { regex: "hero/thumb.*.jpg$/" } }
       ) {
         nodes {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 330) {
-              ...GatsbyImageSharpFluid
-              ...GatsbyImageSharpFluid_withWebp
+            fixed(quality: 100, width: 400) {
+              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_withWebp
             }
           }
         }
       }
     }
   `)
+
   const backgroundStack = [
     bg.childImageSharp.fluid,
     clouds.childImageSharp.fluid,
@@ -69,48 +80,37 @@ const Hero = () => {
           className="senior"
         />
 
-        <Thumb
-          fluid={thumbs[0].childImageSharp.fluid}
-          y={["10px", "100px"]}
-          x={[22, 22]}
-          z={1}
-        />
+        <Image fixed={txt.childImageSharp.fixed} className="thumb" />
+        <Image fixed={thumbs[0].childImageSharp.fixed} className="thumb" />
+        <Image fixed={thumbs[1].childImageSharp.fixed} className="thumb" />
+        <Image fixed={thumbs[2].childImageSharp.fixed} className="thumb" />
+        <Image fixed={thumbs[3].childImageSharp.fixed} className="thumb" />
+        <Image fixed={thumbs[4].childImageSharp.fixed} className="thumb" />
 
-        <Thumb
-          fluid={thumbs[1].childImageSharp.fluid}
-          y={["110px", "10px"]}
-          x={[60, 60]}
+        {/* <Image
+          fixed={thumbs[2].childImageSharp.fixed}
+          className="thumb"
+          style={{ left: "10%", top: "10%" }}
         />
-
-        <Thumb
-          fluid={thumbs[2].childImageSharp.fluid}
-          y={["110px", "10px"]}
-          x={[60, 60]}
+        <Image
+          fixed={thumbs[3].childImageSharp.fixed}
+          className="thumb"
+          style={{ left: "10%", top: "10%" }}
         />
+        <Image
+          fixed={thumbs[4].childImageSharp.fixed}
+          className="thumb"
+          style={{ left: "10%", top: "10%" }}
+        /> */}
 
-        <Thumb
-          fluid={thumbs[3].childImageSharp.fluid}
-          y={["110px", "10px"]}
-          x={[60, 60]}
-        />
-
-        <Thumb
-          fluid={thumbs[4].childImageSharp.fluid}
-          y={["110px", "10px"]}
-          x={[60, 60]}
-        />
-
-        {/* <Parallax
-          y={["0px", "500px"]}
-          tagOuter="div"
-          styleOuter={{
-            left: 0,
-            position: "absolute",
-            bottom: "0%",
-            zIndex: 10,
-          }}
-        >
-          <BackgroundImage fluid={backgroundCloudsStack} className="clouds" />
+        {/* <Parallax y={["-100px", "200px"]} x={["500px", "500px"]}>
+          <Image fixed={thumbs[2].childImageSharp.fixed} className="thumb" />
+        </Parallax>
+        <Parallax y={["-100px", "200px"]} x={["500px", "500px"]}>
+          <Image fixed={thumbs[3].childImageSharp.fixed} className="thumb" />
+        </Parallax>
+        <Parallax y={["-100px", "200px"]} x={["500px", "500px"]}>
+          <Image fixed={thumbs[4].childImageSharp.fixed} className="thumb" />
         </Parallax> */}
       </div>
     </BackgroundImage>

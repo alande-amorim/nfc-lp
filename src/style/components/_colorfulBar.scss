@@ -44,6 +44,25 @@ header {
   .colorful_bar {
     div {
       flex: 1;
+      &:nth-child(1) {
+        background: $green;
+        width: 25%;
+      }
+
+      &:nth-child(2) {
+        background: $pink1;
+        width: 25%;
+      }
+
+      &:nth-child(3) {
+        background: $blue1;
+        width: 25%;
+      }
+
+      &:nth-child(4) {
+        background: $yellow;
+        width: 25%;
+      }
     }
   }
 }
