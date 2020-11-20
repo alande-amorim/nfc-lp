@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Carousel from "react-bootstrap/Carousel"
-import BackgroundImage from "gatsby-background-image"
-import { Parallax } from "react-scroll-parallax"
 
 import SectionText from "../SectionText"
 import SectionContent from "../SectionContent"
@@ -10,19 +8,9 @@ import Banner from "../Banner"
 
 const KidsFeatures = () => {
   const {
-    clouds,
     allBannersJson: { nodes: banners },
   } = useStaticQuery(graphql`
     {
-      clouds: file(relativePath: { eq: "clouds.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-
       allBannersJson(filter: { type: { eq: "GROWNUP_FEATURES" } }) {
         nodes {
           id
@@ -75,13 +63,6 @@ const KidsFeatures = () => {
               />
             </Carousel.Item>
           ))}
-
-          {/* <Parallax y={["100px", "0px"]} tagOuter="div">
-            <BackgroundImage
-              fluid={clouds.childImageSharp.fluid}
-              className="clouds-bg"
-            />
-          </Parallax> */}
         </Carousel>
       </SectionContent>
     </section>

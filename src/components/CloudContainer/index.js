@@ -4,7 +4,7 @@ import BackgroundImage from "gatsby-background-image"
 import { Parallax } from "react-scroll-parallax"
 
 const CloudContainer = ({ children }) => {
-  const { clouds, bg, senior, thumbs } = useStaticQuery(graphql`
+  const { clouds } = useStaticQuery(graphql`
     {
       clouds: file(relativePath: { eq: "hero/clouds-bg.png" }) {
         childImageSharp {

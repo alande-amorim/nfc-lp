@@ -8,7 +8,6 @@ import desktopVideo from "../../assets/animation/banner.mp4"
 import mobileVideo from "../../assets/animation/banner-mobile-light.mp4"
 
 const Animation = () => {
-  const [frame, setFrame] = useState(0)
   const [playing, setPlaying] = useState(false)
 
   const { isMobile } = useDeviceDetect()
@@ -18,7 +17,7 @@ const Animation = () => {
   const video = useRef(null)
 
   const handleScroll = () => {
-    const { bottom, height, top } = container.current.getBoundingClientRect()
+    const { bottom, top } = container.current.getBoundingClientRect()
     if (top <= 0 && bottom > screenHeight) {
       playVideo()
     } else {

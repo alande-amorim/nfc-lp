@@ -1,5 +1,4 @@
 import React from "react"
-import Slide from "react-reveal/Slide"
 import BackgroundImage from "gatsby-background-image"
 import { Parallax } from "react-scroll-parallax"
 
@@ -19,12 +18,10 @@ const Banner = ({ background, title, text, position }) => {
       fluid={imgSources}
     >
       <Parallax y={["100px", "210px"]} tagOuter="div">
-        {/* <Slide top> */}
         <div className={`slider__info ${position}`}>
           <h2>{title}</h2>
           <p>{text}</p>
         </div>
-        {/* </Slide> */}
       </Parallax>
     </BackgroundImage>
   )

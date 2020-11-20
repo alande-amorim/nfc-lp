@@ -2,9 +2,6 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Image from "gatsby-image"
-import { Parallax } from "react-scroll-parallax"
-
-import Thumb from "../Thumb"
 
 const Hero = () => {
   const {
