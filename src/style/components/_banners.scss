@@ -84,6 +84,11 @@
 }
 
 @media screen and (max-width: $max-width-lg) {
+  .banners__slider__item {
+    .slider__info {
+    }
+  }
+
   .banner__background {
     &#{&},
     &:before,
@@ -155,6 +160,10 @@
   .banners {
     &__slider {
       &__item {
+        .slider__info {
+          width: 450px;
+        }
+
         &__bg-mask {
           background: linear-gradient(
             to bottom,
