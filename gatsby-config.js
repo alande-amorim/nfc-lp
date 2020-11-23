@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `The Talking Teddy Bear - Momento Toys - Shop Now`,
+    description: `Meet The Talking Teddy Bear; every kid's best friend! Simply tap your phone to the teddy bears chest and watch the magic unfold.`,
+    author: `@momentotoys`,
   },
   plugins: [
     `gatsby-plugin-sass`,

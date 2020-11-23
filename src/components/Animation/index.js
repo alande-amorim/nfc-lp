@@ -1,15 +1,13 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useEffect, useRef } from "react"
 
 import { useWindowSize } from "../../hooks/useWindowSize"
 import useDeviceDetect from "../../hooks/useDeviceDetect"
 
 import SectionText from "../SectionText"
-import desktopVideo from "../../assets/animation/banner.mp4"
-import mobileVideo from "../../assets/animation/banner-mobile-light.mp4"
+import desktopVideo from "../../assets/animation/banner-desk.mp4"
+import mobileVideo from "../../assets/animation/banner-mob.mp4"
 
 const Animation = () => {
-  const [playing, setPlaying] = useState(false)
-
   const { isMobile } = useDeviceDetect()
   const { height: screenHeight } = useWindowSize()
 
@@ -28,12 +26,10 @@ const Animation = () => {
   }
 
   const playVideo = () => {
-    setPlaying(true)
     video.current.play()
   }
 
   const pauseVideo = () => {
-    setPlaying(false)
     video.current.pause()
   }
 
@@ -41,24 +37,24 @@ const Animation = () => {
     if (typeof window !== "undefined" && typeof screenHeight !== "undefined") {
       window.requestAnimationFrame(handleScroll)
     }
-  }, [isMobile, screenHeight])
+  }, [isMobile, screenHeight, handleScroll])
 
   return (
     <section className={`animation`}>
       <SectionText
-        title="... and <br>Momento Bear <br>is the chest."
-        text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit."
+        title="And <br>Momento Bear <br>is the chest."
+        text="Learn how The Talking Teddy Bear can play bedtime stories, save memories, and so much more with just a tap of your phone! Scroll down and watch as the magic unfolds."
         color="red"
         direction="left"
       />
       <div className="video-container" ref={container}>
         {isMobile && (
-          <video loop muted playsInline ref={video}>
+          <video loop playsInline ref={video}>
             <source src={mobileVideo} type="video/mp4" />
           </video>
         )}
         {!isMobile && (
-          <video loop muted playsInline ref={video}>
+          <video loop playsInline ref={video}>
             <source src={desktopVideo} type="video/mp4" />
           </video>
         )}

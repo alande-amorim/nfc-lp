@@ -45,7 +45,7 @@ const KidsFeatures = () => {
     <section className="banners kids right">
       <SectionText
         title="For the <br>Little ones"
-        text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit."
+        text="Each fluffy friend comes stuffed with over 35 of the best stories from around the world. With nursery rhymes, fairytale adventure stories, and other amazing content this bear is made to amaze."
         color="green"
         direction="right"
       />

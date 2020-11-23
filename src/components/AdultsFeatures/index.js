@@ -45,7 +45,7 @@ const KidsFeatures = () => {
     <section className="banners grown-ups left">
       <SectionText
         title="For the <br>Grown-ups"
-        text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit."
+        text="The Talking Teddy Bear is also an amazing gift for parents. This fluffy friend will save you hours in trying to find the best stories for your little ones, while being an amazing personalized gift."
         color="blue"
         direction="left"
       />
