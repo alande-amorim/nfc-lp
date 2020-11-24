@@ -26,7 +26,7 @@
 
   &.right {
     p {
-      clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
+      clip-path: polygon(0 1%, 100% 0, 100% 94%, 0% 99%);
     }
   }
 
@@ -82,10 +82,10 @@
 .section__content {
   margin-top: -23px;
   &.left {
-    clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
   }
   &.right {
-    clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
   }
 }
 
@@ -157,6 +157,11 @@
   }
 
   .section__content {
-    margin-top: 0;
+    &.left {
+      clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
+    }
+    &.right {
+      clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+    }
   }
 }
