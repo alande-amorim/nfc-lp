@@ -3,24 +3,24 @@
     "image": {
       "src": "bear1.jpg"
     },
-    "title": "Yellow",
+    "title": "White",
     "text": "Each different bear comes filled with tons of amazing stories perfect for your child!",
-    "url": "https://www.momentotoys.com/product/the-talking-teddy-bear/"
+    "url": "https://www.momentotoys.com/product/the-talking-teddy-bear/?color=white"
   },
   {
     "image": {
       "src": "bear2.jpg"
     },
-    "title": "Yellow",
+    "title": "Pink",
     "text": "Each different bear comes filled with tons of amazing stories perfect for your child!",
-    "url": "https://www.momentotoys.com/product/the-talking-teddy-bear/"
+    "url": "https://www.momentotoys.com/product/the-talking-teddy-bear/?color=pink"
   },
   {
     "image": {
       "src": "bear3.jpg"
     },
-    "title": "Yellow",
+    "title": "Brown",
     "text": "Each different bear comes filled with tons of amazing stories perfect for your child!",
-    "url": "https://www.momentotoys.com/product/the-talking-teddy-bear/"
+    "url": "https://www.momentotoys.com/product/the-talking-teddy-bear/?color=brown"
   }
 ]

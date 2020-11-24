@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/smart-bear`,
   siteMetadata: {
     title: `The Talking Teddy Bear - Momento Toys - Shop Now`,
     description: `Meet The Talking Teddy Bear; every kid's best friend! Simply tap your phone to the teddy bears chest and watch the magic unfold.`,

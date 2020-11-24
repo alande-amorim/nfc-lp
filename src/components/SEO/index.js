@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+import shareImage from "../../../static/share-1200x630.jpg"
+
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -22,62 +24,26 @@ function SEO({ description, lang, meta, title }) {
   const defaultTitle = site.siteMetadata?.title
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={defaultTitle}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        {
-          name: `theme-color`,
-          content: `#ff8f91`,
-        },
-        {
-          name: `msapplication-TileColor`,
-          content: `#ff8f91`,
-        },
-        {
-          name: `msapplication-navbutton-color`,
-          content: `#ff8f91`,
-        },
-        {
-          name: `apple-mobile-web-app-status-bar-style`,
-          content: `#ff8f91`,
-        },
-      ].concat(meta)}
-    />
+    <Helmet>
+      <meta charset="utf-8" />
+      <title>{defaultTitle}</title>
+      <html lang="en" />
+      <meta name="description" content={metaDescription} />
+      <meta name="og:url" content="https://www.momentotoys.com/smart-bear" />
+      <meta name="og:type" content="website" />
+      <meta name="og:title" content={defaultTitle} />
+      <meta name="og:description" content={description} />
+      <meta
+        name="og:image"
+        content={`https://www.momentotoys.com/smart-bear${shareImage}`}
+      />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
+      <meta name="twitter:title" content={defaultTitle} />
+      <meta name="twitter:description" content={description} />
+    </Helmet>
   )
 }
 

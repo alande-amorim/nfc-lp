@@ -1,14 +1,12 @@
-import React from "react"
+import { useEffect } from "react"
+import { navigate } from "@reach/router"
 
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+const NotFoundPage = () => {
+  useEffect(() => {
+    navigate("/smart-bear")
+  }, [])
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+  return null
+}
 
 export default NotFoundPage
