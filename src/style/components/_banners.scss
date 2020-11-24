@@ -4,6 +4,12 @@
   &__slider {
     p {
       font-size: 1.1rem;
+      text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
+    }
+    h2 {
+      font-size: 3rem;
+      line-height: 3rem;
+      text-shadow: 0px 0px 48px rgba(0, 0, 0, 0.4);
     }
 
     &__item {
@@ -28,11 +34,6 @@
           h2 {
             text-align: right !important;
           }
-        }
-
-        h2 {
-          font-size: 3rem;
-          line-height: 3rem;
         }
       }
 
@@ -86,6 +87,7 @@
 @media screen and (max-width: $max-width-lg) {
   .banners__slider__item {
     .slider__info {
+      top: 29%;
     }
   }
 

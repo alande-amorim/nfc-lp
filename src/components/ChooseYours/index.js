@@ -60,7 +60,7 @@ const ChooseYours = () => {
 
   return (
     <section className="products">
-      <h2>Lorem ipsum dolor sit amet consectetur</h2>
+      <h2>Who’s Going To Be Your Next Best Friend?</h2>
 
       <Slider {...settings} className="products__list">
         {products.map((product, index) => {

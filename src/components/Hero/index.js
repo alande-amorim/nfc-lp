@@ -77,38 +77,12 @@ const Hero = () => {
           className="senior"
         />
 
-        <Image fixed={txt.childImageSharp.fixed} className="thumb" />
+        <Image fixed={txt.childImageSharp.fixed} className="thumb text" />
         <Image fixed={thumbs[0].childImageSharp.fixed} className="thumb" />
         <Image fixed={thumbs[1].childImageSharp.fixed} className="thumb" />
         <Image fixed={thumbs[2].childImageSharp.fixed} className="thumb" />
         <Image fixed={thumbs[3].childImageSharp.fixed} className="thumb" />
         <Image fixed={thumbs[4].childImageSharp.fixed} className="thumb" />
-
-        {/* <Image
-          fixed={thumbs[2].childImageSharp.fixed}
-          className="thumb"
-          style={{ left: "10%", top: "10%" }}
-        />
-        <Image
-          fixed={thumbs[3].childImageSharp.fixed}
-          className="thumb"
-          style={{ left: "10%", top: "10%" }}
-        />
-        <Image
-          fixed={thumbs[4].childImageSharp.fixed}
-          className="thumb"
-          style={{ left: "10%", top: "10%" }}
-        /> */}
-
-        {/* <Parallax y={["-100px", "200px"]} x={["500px", "500px"]}>
-          <Image fixed={thumbs[2].childImageSharp.fixed} className="thumb" />
-        </Parallax>
-        <Parallax y={["-100px", "200px"]} x={["500px", "500px"]}>
-          <Image fixed={thumbs[3].childImageSharp.fixed} className="thumb" />
-        </Parallax>
-        <Parallax y={["-100px", "200px"]} x={["500px", "500px"]}>
-          <Image fixed={thumbs[4].childImageSharp.fixed} className="thumb" />
-        </Parallax> */}
       </div>
     </BackgroundImage>
   )

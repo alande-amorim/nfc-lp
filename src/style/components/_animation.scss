@@ -1,6 +1,6 @@
 .animation {
   height: 250vh;
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
 
   .video-container {
     height: calc(100% - 407px);
@@ -43,6 +43,12 @@
   }
 
   // position: relative;
+}
+
+@media screen and (max-width: $max-width-lg) {
+  // .animation {
+  //   margin-bottom: 0;
+  // }
 }
 
 @media screen and (min-width: $max-width-lg) {
