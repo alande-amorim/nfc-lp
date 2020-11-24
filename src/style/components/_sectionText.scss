@@ -82,7 +82,7 @@
 .section__content {
   margin-top: -23px;
   &.left {
-    clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 2%, 100% 99%, 0 100%);
   }
   &.right {
     clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
