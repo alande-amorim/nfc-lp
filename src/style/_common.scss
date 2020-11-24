@@ -63,6 +63,12 @@ a.btn {
   }
 }
 
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
 @media screen and (min-width: $max-width-lg) {
   .carousel-indicators {
     margin-bottom: 5rem;
