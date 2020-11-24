@@ -16,7 +16,7 @@
   {
     "type": "KIDS_FEATURES",
     "title": "Fairy Tales",
-    "text": "Fairytales are a very important part of every childhood. We have included some of the most amazing fairytales from around the world. These stories are for children of preschool age that will enjoy the more developed storylines. With so many amazing fairytales your little ones will struggle to get bored.",
+    "text": "Fairytales are an important part of every childhood. We have included some of the most amazing fairytales from around the world. These stories are for children of preschool age that will enjoy the more developed storylines. With so many amazing fairytales your little ones will struggle to get bored.",
     "textPosition": "right",
     "image": {
       "desktop": {
@@ -30,7 +30,7 @@
   {
     "type": "KIDS_FEATURES",
     "title": "Educational Content",
-    "text": "The stories that we have included are the best way for your child to learn concepts such as morals, social dynamics, and so much more while learning to enjoy the beauty of story time. Give the gift of story time and feed the minds of who you love most.",
+    "text": "The stories that we have included are the best way for your child to start learning concepts such as morals, and social dynamics while learning to enjoy the beauty of story time. Give the gift of story time and feed the minds of who you love most.",
     "textPosition": "left",
     "image": {
       "desktop": {
@@ -44,7 +44,7 @@
   {
     "type": "GROWNUP_FEATURES",
     "title": "Smart, fun & educative",
-    "text": "This bear is an amazing way for busy parents to ensure their children are having fun while learning. With so many amazing stories and features they won’t get bored and you won’t have to spend hours trying to find the best stories. Simply tap your phone and watch as The Talking Teddy Bear comes to life.",
+    "text": "This bear is an amazing way for busy parents to ensure their children are having fun while learning. With so many amazing stories and features they won’t get bored and you won’t have to spend hours trying to find the best stories. Simply tap your phone and watch The Talking Teddy Bear go.",
     "textPosition": "left",
     "image": {
       "desktop": {
@@ -58,7 +58,7 @@
   {
     "type": "GROWNUP_FEATURES",
     "title": "Share Picures",
-    "text": "Another amazing feature about The Talking Teddy Bear is the fact that you can share photos. Tap your phone to the bears chest and you can upload any family pictures that you love dearly. These photos are available to you any time you tap your phone again to the bear's chest. This is an amazing way to surprise someone!",
+    "text": "Another amazing feature about The Talking Teddy Bear is the fact that you can share photos. Tap your phone to the bears chest and you can upload any family pictures that you love dearly. These photos are available to you any time you tap your phone again to the bears chest. This is an amazing way to surprise someone!",
     "textPosition": "right",
     "image": {
       "desktop": {
@@ -71,8 +71,8 @@
   },
   {
     "type": "GROWNUP_FEATURES",
-    "title": "Share Picures",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis aliquid incidunt culpa nam atque numquam recusandae obcaecati ad commodi.",
+    "title": "Share Videos",
+    "text": "Memories are special moments that help tell our stories. Save your favorite video memories within the teddy bear by simply tapping your phone. This would be an amazing gift for your most beloved family members. You can access these amazing family moments at any time by tapping your phone to the bear's chest.",
     "textPosition": "left",
     "image": {
       "desktop": {
