@@ -29,20 +29,23 @@ function SEO({ description, lang, meta, title }) {
       <title>{defaultTitle}</title>
       <html lang="en" />
       <meta name="description" content={metaDescription} />
-      <meta name="og:url" content="https://www.momentotoys.com/smart-bear" />
-      <meta name="og:type" content="website" />
-      <meta name="og:title" content={defaultTitle} />
-      <meta name="og:description" content={description} />
       <meta
-        name="og:image"
-        content={`https://www.momentotoys.com/smart-bear${shareImage}`}
+        property="og:url"
+        content="https://www.momentotoys.com/smart-bear/"
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={defaultTitle} />
+      <meta property="og:description" content={metaDescription} />
+      <meta
+        property="og:image"
+        content={`https://www.momentotoys.com${shareImage}`}
       />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
       <meta name="twitter:title" content={defaultTitle} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:description" content={metaDescription} />
     </Helmet>
   )
 }
