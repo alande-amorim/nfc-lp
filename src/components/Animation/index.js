@@ -86,11 +86,7 @@ const Animation = () => {
         color="red"
         direction="left"
       />
-      <div
-        className="video-container"
-        ref={container}
-        style={{ position: "relative" }}
-      >
+      <div className="video-container" ref={container}>
         <div className="video-wrapper">
           {isMobile && (
             <video loop muted={muted} playsInline ref={video}>

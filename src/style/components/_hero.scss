@@ -15,6 +15,7 @@
       rgba(255, 255, 255, 0) 10%
     );
     .thumb {
+      width: 400px;
       position: absolute !important;
       z-index: 11;
       transform: translate(-50%, -50%);
@@ -40,6 +41,12 @@
     &:before,
     &:after {
       background-size: contain !important;
+    }
+  }
+
+  .cloud-container {
+    a {
+      width: 600px;
     }
   }
 }

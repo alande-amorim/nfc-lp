@@ -9,7 +9,7 @@ const Hero = () => {
     bg,
     senior,
     txt,
-    thumbs: { nodes: thumbs },
+    thumbs: { nodes: thumbsDesktop },
   } = useStaticQuery(graphql`
     {
       bg: file(relativePath: { eq: "hero/hero-bg.jpg" }) {
@@ -54,9 +54,9 @@ const Hero = () => {
       ) {
         nodes {
           childImageSharp {
-            fixed(quality: 100, width: 400) {
-              ...GatsbyImageSharpFixed
-              ...GatsbyImageSharpFixed_withWebp
+            fluid(quality: 100, maxWidth: 400, srcSetBreakpoints: [200, 400]) {
+              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -78,11 +78,26 @@ const Hero = () => {
         />
 
         <Image fixed={txt.childImageSharp.fixed} className="thumb text" />
-        <Image fixed={thumbs[0].childImageSharp.fixed} className="thumb" />
-        <Image fixed={thumbs[1].childImageSharp.fixed} className="thumb" />
-        <Image fixed={thumbs[2].childImageSharp.fixed} className="thumb" />
-        <Image fixed={thumbs[3].childImageSharp.fixed} className="thumb" />
-        <Image fixed={thumbs[4].childImageSharp.fixed} className="thumb" />
+        <Image
+          fluid={thumbsDesktop[0].childImageSharp.fluid}
+          className="thumb"
+        />
+        <Image
+          fluid={thumbsDesktop[1].childImageSharp.fluid}
+          className="thumb"
+        />
+        <Image
+          fluid={thumbsDesktop[2].childImageSharp.fluid}
+          className="thumb"
+        />
+        <Image
+          fluid={thumbsDesktop[3].childImageSharp.fluid}
+          className="thumb"
+        />
+        <Image
+          fluid={thumbsDesktop[4].childImageSharp.fluid}
+          className="thumb"
+        />
       </div>
     </BackgroundImage>
   )

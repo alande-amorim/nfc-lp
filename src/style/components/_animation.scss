@@ -1,8 +1,8 @@
 .animation {
   height: 250vh;
-  // margin-bottom: 60px;
 
   .video-container {
+    position: relative;
     height: calc(100% - 407px);
     margin-top: -1rem;
     width: 100vw;

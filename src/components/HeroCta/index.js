@@ -4,7 +4,7 @@ import CloudContainer from "../CloudContainer"
 const HeroCta = () => {
   return (
     <CloudContainer>
-      <a href="https://nfcbear.com/" className="btn" style={{ width: "600px" }}>
+      <a href="https://nfcbear.com/" className="btn">
         Shop Now
       </a>
     </CloudContainer>
