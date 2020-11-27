@@ -4,7 +4,10 @@ import CloudContainer from "../CloudContainer"
 const HeroCta = () => {
   return (
     <CloudContainer>
-      <a href="https://nfcbear.com/" className="btn">
+      <a
+        href="https://www.momentotoys.com/product/the-talking-teddy-bear/"
+        className="btn"
+      >
         Shop Now
       </a>
     </CloudContainer>
